@@ -118,7 +118,7 @@ $g-line-height: 1.5;
 
 $g-heading: (
 	'font-size': 			(2rem, 1.75rem, 1.5rem, 1.25rem, 1.125rem, 1rem),
-	'font-weight': 		map-get(map-get($g-font, weight), 'semibold'),
+	'font-weight': 		set-font($g-font, weight, semibold),
 	'line-height': 		(1.2, 1.2, 1.25, 1.25, 1.5, 1.5),
 	'margin-bottom': 	(1.5rem, 1.25rem, 1.25rem, 1rem, 1rem 1rem)
 );

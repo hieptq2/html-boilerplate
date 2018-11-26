@@ -8,7 +8,6 @@
 	@extend %clearfix;
 }
 
-
 // background
 .h-bg-cover{
 	@extend %bg-cover;
@@ -17,12 +16,10 @@
 	@extend %bg-contain;
 }
 
-
 // size
 .h-fullsize{
 	@extend %fullsize;
 }
-
 
 // shadow
 .h-shadow-1{
@@ -37,7 +34,6 @@
 .h-shadow-4{
 	box-shadow: 0 4px 10px 0 rgba(#000,.2);
 }
-
 
 // shape
 .h-rectangle{
@@ -64,7 +60,6 @@
 	&--r916{ 	&:after { padding-bottom: 178%; } }
 }
 
-
 // image
 .h-img-fitin{
 	display: block;
@@ -83,11 +78,9 @@
 		max-height: 100%;
 	}
 }
-
 .h-img-cover{
 	@extend %img-cover;
 }
-
 
 // text
 .h-text-oneline{
