@@ -1,0 +1,96 @@
+/* ============================================================================
+   UTILS -> helpers
+   ========================================================================= */
+
+
+// clear
+.h-clearfix{
+	@extend %clearfix;
+}
+
+
+// background
+.h-bg-cover{
+	@extend %bg-cover;
+}
+.h-bg-contain{
+	@extend %bg-contain;
+}
+
+
+// size
+.h-fullsize{
+	@extend %fullsize;
+}
+
+
+// shadow
+.h-shadow-1{
+	box-shadow: 0 1px 3px 0 rgba(#000,.08);
+}
+.h-shadow-2{
+	box-shadow: 0 2px 5px 0 rgba(#000,.12);
+}
+.h-shadow-3{
+	box-shadow: 0 3px 8px 0 rgba(#000,.16);
+}
+.h-shadow-4{
+	box-shadow: 0 4px 10px 0 rgba(#000,.2);
+}
+
+
+// shape
+.h-rectangle{
+	position: relative;
+	display: block;
+	&:after {
+	  content: "";
+	  display: block;
+	  padding-bottom: 100%;
+	}
+	&__inner{
+  	display: block;
+		position: absolute;
+  	top: 0; left: 0; right: 0; bottom: 0;
+	}
+	&--r11{ 	&:after { padding-bottom: 100%; } }
+	&--r31{ 	&:after { padding-bottom: 33.3333%; } }
+	&--r13{ 	&:after { padding-bottom: 300%; } }
+	&--r32{ 	&:after { padding-bottom: 66.6666%; } }
+	&--r23{ 	&:after {	padding-bottom: 150%; } }
+	&--r21{ 	&:after {	padding-bottom: 50%; } }
+	&--r12{ 	&:after { padding-bottom: 200%; } }
+	&--r169{ 	&:after { padding-bottom: 56.25%; } }
+	&--r916{ 	&:after { padding-bottom: 178%; } }
+}
+
+
+// image
+.h-img-fitin{
+	display: block;
+	text-align: center;
+	white-space: nowrap;
+	&:after{
+		content:"";
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+	}
+	img{
+		display: inline-block;
+		vertical-align: middle;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+.h-img-cover{
+	@extend %img-cover;
+}
+
+
+// text
+.h-text-oneline{
+	@include one-line-ellipsis();
+}
+

@@ -1,0 +1,370 @@
+/**
+ * 
+ * MAIN STYLE
+ * ----------------------------------------------------------------------------
+ * Template Name:
+ * Description:
+ * Time:
+ * ----------------------------------------------------------------------------
+ * Hiep Ta | henry9.com | contact@henry9.com
+ * 
+ */
+/* ============================================================================
+   UTILS
+   ========================================================================= */
+/**
+ * Utilities, abstracts & global settings.
+ */
+/* ============================================================================
+   UTILS -> material-colors
+   ========================================================================= */
+/* 
+ * BONUS
+ * Google Material UI Color Palette
+ * 
+ */
+/* 
+ * Colors Map
+ */
+/**
+ * Retrieves a color value from the $material-colors Sass map
+ *
+ * @function
+ * @param {string} color-name             - quoted, lower-case, dasherized color
+ *                                          name (e.g. 'pink', 'amber')
+ * @param {string} [color-variant='500']  - quoted, lowercase color variant (e.g.
+ *                                          '200', 'a100')
+ */
+/* ============================================================================
+   UTILS -> functions
+   ========================================================================= */
+/* 
+ * Retrieves a color value from the $g-color and $color Sass map
+ */
+/* 
+ * Retrieves a font property value from the $g-font Sass map
+ */
+/* 
+ * Convert PX to REM
+ */
+/* ============================================================================
+   UTILS -> variables
+   ========================================================================= */
+/**
+ * Global settings are namespaced with g- ("g" stands for "global")
+ * Local settings defined outside of the global settings.
+ */
+/*
+ * Grid
+ */
+/*
+ * Colors
+ */
+/*
+ * Font
+ */
+/*
+ * Line Height
+ */
+/*
+ * Heading
+ * h1 to h6
+ */
+/*
+ * Link
+ */
+/*
+ * Easings
+ */
+/*
+ * Z-index
+ */
+/* ============================================================================
+   UTILS -> mixins
+   ========================================================================= */
+/* 
+ * Breakpoint viewport sizes and media queries
+ */
+/* 
+ * One text row limit (place '...' at the end)
+ */
+/* 
+ * Multiple text rows limit (place '...' at the end)
+ */
+/* 
+ * Customize scrollbar (webkit)
+ */
+/* 
+ * Triangle
+ * top, bottom, left, right
+ * top-right, bottom-right, bottom-left, top-left
+ */
+/* ============================================================================
+   UTILS -> placeholders
+   ========================================================================= */
+.h-clearfix:before, .h-clearfix:after {
+  content: " ";
+  display: table;
+}
+.h-clearfix:after {
+  clear: both;
+}
+
+.c-list--reset, .c-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.h-bg-cover {
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.h-bg-contain {
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  -webkit-background-size: contain;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+.h-fullsize {
+  width: 100%;
+  height: 100%;
+}
+
+.h-img-cover {
+  display: block;
+  object-fit: cover;
+}
+
+/* ============================================================================
+   UTILS -> helpers
+   ========================================================================= */
+.h-shadow-1 {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+.h-shadow-2 {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.h-shadow-3 {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.h-shadow-4 {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.h-rectangle {
+  position: relative;
+  display: block;
+}
+.h-rectangle:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.h-rectangle__inner {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.h-rectangle--r11:after {
+  padding-bottom: 100%;
+}
+.h-rectangle--r31:after {
+  padding-bottom: 33.3333%;
+}
+.h-rectangle--r13:after {
+  padding-bottom: 300%;
+}
+.h-rectangle--r32:after {
+  padding-bottom: 66.6666%;
+}
+.h-rectangle--r23:after {
+  padding-bottom: 150%;
+}
+.h-rectangle--r21:after {
+  padding-bottom: 50%;
+}
+.h-rectangle--r12:after {
+  padding-bottom: 200%;
+}
+.h-rectangle--r169:after {
+  padding-bottom: 56.25%;
+}
+.h-rectangle--r916:after {
+  padding-bottom: 178%;
+}
+
+.h-img-fitin {
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+}
+.h-img-fitin:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.h-img-fitin img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.h-text-oneline {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ============================================================================
+   BASE
+   ========================================================================= */
+/* ============================================================================
+   BASE -> reset
+   ========================================================================= */
+/* ============================================================================
+   BASE -> base
+   ========================================================================= */
+body {
+  color: #212121;
+  background-color: #f5f5f5;
+}
+
+/* ============================================================================
+   BASE -> typography
+   ========================================================================= */
+hr {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================================================
+   BASE -> animation
+   ========================================================================= */
+/* ============================================================================
+   COMPONENTS
+   ========================================================================= */
+/**
+ * - Classes are started with '.c-'
+ * - Imported files are order alphabetically
+ */
+/* ============================================================================
+   COMPONENTS -> breadcrumb
+   ========================================================================= */
+/* ============================================================================
+   COMPONENTS -> button
+   ========================================================================= */
+.c-card {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+/* ============================================================================
+   COMPONENTS -> list
+   ========================================================================= */
+.c-list--people__single-person a {
+  display: block;
+}
+
+/* ============================================================================
+   COMPONENTS -> menu
+   ========================================================================= */
+/* ============================================================================
+   COMPONENTS -> modal
+   ========================================================================= */
+/* ============================================================================
+   COMPONENTS -> table
+   ========================================================================= */
+/* ============================================================================
+   COMPONENTS -> thumbnail
+   ========================================================================= */
+/* ============================================================================
+   LAYOUT
+   ========================================================================= */
+/**
+ * - Classes are started with '.l-'
+ */
+/* ============================================================================
+   LAYOUT -> header
+   ========================================================================= */
+/* ============================================================================
+   LAYOUT -> footer
+   ========================================================================= */
+/* ============================================================================
+   LAYOUT -> grid
+   ========================================================================= */
+/* ============================================================================
+   PAGES
+   ========================================================================= */
+/* ============================================================================
+   PAGES -> home
+   ========================================================================= */
+/* ============================================================================
+   THEME
+   ========================================================================= */
+/**
+ * Style for custom themes
+ */
+/* ============================================================================
+   THEME -> theme
+   ========================================================================= */
+/**
+ * Default theme
+ */
+/**
+ * NAMESPACE GUIDE
+ *
+ * l- 	: Layout
+ * c- 	: Components
+ * h- 	: Helpers
+ * t- 	: Themes
+ * s- 	: Scoped
+ * _ 		: Hack
+ * 
+ * js- 				: JS hooks
+ * is-/has- 	: State hooks
+ * ss- 				: Server-side hooks
+ * qa- 				: QA hooks
+ * track- 		: Tracking hooks
+ */
+/**
+ * JS HOOK CLASSES
+ *
+ * is-active
+ * has-loaded
+ * is-loading
+ * is-visible
+ * is-disabled
+ * is-expanded
+ * is-collapsed
+ */
+/**
+ * SIZE
+ *
+ * -xxs
+ * -xs
+ * -sm
+ * -md (default)
+ * -lg
+ * -xl
+ * -xxl
+ */
