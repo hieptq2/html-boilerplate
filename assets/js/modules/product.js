@@ -1,18 +1,17 @@
 define([], function () {
   'use strict';
 
-  var home = (function() {
+  var product = (function() {
     var init = function() {
-      console.log('home');
+      console.log('product');
     };
 
     return {
-      // path:     'modules/product',
       init: init
     };
   })();
 
-  return home;
+  return product;
 });
 
 	
