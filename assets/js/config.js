@@ -5,8 +5,7 @@
 
 
 requirejs.config({
-
-  baseUrl: './assets/js',
+  baseUrl: 'assets/js',
   paths: {
   	// libraries
     'jquery':[
@@ -19,9 +18,8 @@ requirejs.config({
     'swiper': 				'libs/swiper.min',
 
     // modules
-    //
+    'main':           'modules/home'
   },
-
   shim:{
 		// libraries
     'jquery': {
@@ -33,22 +31,15 @@ requirejs.config({
 
     // modules
     //
-
   }
-
 });
 
-
-require([
+requirejs([
 	'jquery',
 	'bootstrap',
 	'easing',
 	'swiper'
-], function(){
-
-	$(function () {
-	  $('[data-toggle="tooltip"]').tooltip();
-	})
-	
-})
+], function($){
+  //
+});
 
