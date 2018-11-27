@@ -2,16 +2,8 @@
    COMPONENTS -> menu
    ========================================================================= */
 
+
 .c-menu{
 	$self: &;
 	@extend %list-reset;
-
-	// customize bootstrap tab menu, require default class .tab-menu
-	&--tabmenu{
-		li{
-			a{
-				//
-			}
-		}
-	}
 }

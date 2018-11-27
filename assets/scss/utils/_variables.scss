@@ -8,7 +8,7 @@
  */
 
 
-/*
+/**
  * Grid
  */
 
@@ -118,7 +118,7 @@ $g-line-height: 1.5;
 
 $g-heading: (
 	'font-size': 			(2rem, 1.75rem, 1.5rem, 1.25rem, 1.125rem, 1rem),
-	'font-weight': 		set-font($g-font, weight, semibold),
+	'font-weight': 		set-font($g-font, 'weight', 'semibold'),
 	'line-height': 		(1.2, 1.2, 1.25, 1.25, 1.5, 1.5),
 	'margin-bottom': 	(1.5rem, 1.25rem, 1.25rem, 1rem, 1rem 1rem)
 );
@@ -128,8 +128,8 @@ $g-heading: (
  */
 
 $g-link: (
-	'color' 						: set-color($g-color, primary),
-	'color--hover' 			: set-color($g-color, primary, darker),
+	'color' 						: set-color($g-color, 'primary'),
+	'color--hover' 			: set-color($g-color, 'primary', 'darker'),
 	'decoration' 				: none,
 	'decoration-hover' 	: none,
 );
@@ -140,8 +140,8 @@ $g-link: (
  */
 
 $g-easing: (
-	'ease-linear':           	'linear',
-	'ease-in-out':           	'ease-in-out', 
+	'ease-linear':           	linear,
+	'ease-in-out':           	ease-in-out, 
 	'ease-in-out-cubic':     	cubic-bezier(0.645, 0.045, 0.355, 1.000), 
 	'ease-in-out-quart':     	cubic-bezier(0.770, 0.000, 0.175, 1.000),
 	'ease-in-out-quint':     	cubic-bezier(0.860, 0.000, 0.070, 1.000),

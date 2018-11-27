@@ -2,11 +2,11 @@
    UTILS -> functions
    ========================================================================= */
 
-/* 
+/**
  * Retrieves a color value from the $g-color and $color Sass map
  */
 
-@function set-color($scheme, $color, $tone: base) {
+@function set-color($scheme, $color, $tone: 'base') {
   $color: map-get(map-get($scheme, $color), $tone);
   @if $color {
     @return $color;
@@ -16,21 +16,21 @@
 }
 
 
-/* 
+/** 
  * Retrieves a font property value from the $g-font Sass map
  */
 
-@function set-font($font, $property, $value: base) {
+@function set-font($font, $property, $value: 'base') {
   $value: map-get(map-get($g-font, $property), $value);
   @if $value {
     @return $value;
   }@else{
-    @warn "=> ERROR: FONT PROPERTY NOT FOUND!";
+    @warn '=> ERROR: FONT PROPERTY NOT FOUND!';
   }
 }
 
 
-/* 
+/** 
  * Convert PX to REM
  */
 
