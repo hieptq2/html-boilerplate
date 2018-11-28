@@ -3,7 +3,7 @@
  *
  */
 
-(function () {
+(function(){
   'use strict';
 
   requirejs.config({
@@ -12,19 +12,20 @@
     paths: {
 
     	// libraries
-      'jquery':[
-      	'libs/jquery.min',
-      	'https://code.jquery.com/jquery-3.3.1.min.js'
-      ], 	
-      'autosize': 			'libs/autosize.min',
+      'jquery': [
+        // 'https://code.jquery.com/jquery-3.3.1.min.js',
+      	'libs/jquery.min'
+      ],
       'bootstrap': 			'libs/bootstrap.bundle.min',
       'easing': 				'libs/jquery.easing.min',
       'swiper': 				'libs/swiper.min',
 
       // modules
       'base':           'modules/base',
+      'header':         'modules/header',
+      'footer':         'modules/footer',
+
       'home':           'modules/home',
-      'product':        'modules/product'
     },
 
     shim:{
@@ -39,13 +40,17 @@
 
       // modules
       'base': {
-        deps: ['jquery']
+        deps: ['jquery', 'bootstrap']
       },
-      'home': {
-        deps: ['jquery','product']
+      'header': {
+        deps: ['jquery', 'bootstrap']
       },
-      'product': {
-        deps: ['jquery']
+      'footer': {
+        deps: ['jquery', 'bootstrap']
+      },
+
+      'home':{
+        deps: ['jquery', 'bootstrap', 'swiper']
       },
       
     }
@@ -53,23 +58,28 @@
 
   require([
     'base',
+    'header',
+    'footer',
   	'jquery',
   	'bootstrap',
-  	'easing',
-  	'swiper',
-  ], function(base, $, bootstrap, easing, swiper){
-    // console.log('1');
+  	'easing'
+  ], function(base, header, footer, $, bootstrap, easing){
 
     // Global module
     base.init();
+    header.init();
+    footer.init();
 
     // Page specific module
     var currentModule = $('#SiteContent').attr('data-start');
-    console.log('Module:' + currentModule);
-    if (currentModule) {
+    var listModules = ['home'];
+
+    if (currentModule && $.inArray(currentModule, listModules) !== -1) {
       require([currentModule], function (currentModule) {
         currentModule.init();
       });
+    }else{
+      console.log('Not found any Specific module of page in #SiteContent');
     }
   });
 

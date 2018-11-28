@@ -1,10 +1,10 @@
 define([], function(){
   'use strict';
 
-  var home = (function(){
+  var footer = (function(){
     var init = function(){
 
-      console.log('module: home');
+      console.log('module: footer');
 
     };
 
@@ -13,7 +13,7 @@ define([], function(){
     };
   })();
 
-  return home;
+  return footer;
 });
 
 	
