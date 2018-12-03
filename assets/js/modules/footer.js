@@ -1,5 +1,7 @@
-define([], function(){
+define(['header'], function(){
   'use strict';
+
+  console.log('before | module: footer');
 
   var footer = (function(){
     var init = function(){

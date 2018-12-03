@@ -79,6 +79,28 @@
 
 
 /**
+ * Button
+ */
+
+@mixin button-color($color, $bg-color, $bd-color, 
+                    $h-color: $color, $h-bg-color: $bg-color, $h-bd-color: $bd-color){
+  color: $color;
+  background-color: $bg-color;
+  border-color: $bd-color;
+  &:not(:disabled):not(.disabled){
+    &:hover{
+      color: $h-color;
+      background-color: $h-bg-color;
+      border-color: $h-bd-color;
+    }
+    &:active{
+      box-shadow: inset 0 3px 8px rgba(0,0,0,.08);
+    }
+  }
+}
+
+
+/**
  * Customize scrollbar (webkit)
  */
 

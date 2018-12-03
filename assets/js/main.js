@@ -16,9 +16,18 @@
         // 'https://code.jquery.com/jquery-3.3.1.min.js',
       	'libs/jquery.min'
       ],
-      'bootstrap': 			'libs/bootstrap.bundle.min',
-      'easing': 				'libs/jquery.easing.min',
-      'swiper': 				'libs/swiper.min',
+      'bootstrap': [
+        // 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js',
+        'libs/bootstrap.bundle.min'
+      ],
+      'easing': [
+        // 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js',
+        'libs/jquery.easing.min'
+      ],	
+      'swiper': [
+        // https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.min.js
+        'libs/swiper.min'
+      ],
 
       // modules
       'base':           'modules/base',
@@ -50,7 +59,7 @@
       },
 
       'home':{
-        deps: ['jquery', 'bootstrap', 'swiper']
+        deps: ['jquery', 'bootstrap', 'swiper', 'easing']
       },
       
     }
@@ -68,10 +77,10 @@
     // Global module
     base.init();
     header.init();
-    footer.init();
+    // footer.init();
 
     // Page specific module
-    var currentModule = $('#SiteContent').attr('data-start');
+    var currentModule = $('#SiteContent').attr('data-js-module');
     var listModules = ['home'];
 
     if (currentModule && $.inArray(currentModule, listModules) !== -1) {
@@ -79,7 +88,7 @@
         currentModule.init();
       });
     }else{
-      console.log('Not found any Specific module of page in #SiteContent');
+      console.log('Not found any Specific Module of Current Page in #SiteContent');
     }
   });
 

@@ -16,18 +16,7 @@
 }
 
 
-/** 
- * Retrieves a font property value from the $g-font Sass map
- */
 
-@function set-font($font, $property, $value: 'base') {
-  $value: map-get(map-get($g-font, $property), $value);
-  @if $value {
-    @return $value;
-  }@else{
-    @warn '=> ERROR: FONT PROPERTY NOT FOUND!';
-  }
-}
 
 
 /** 

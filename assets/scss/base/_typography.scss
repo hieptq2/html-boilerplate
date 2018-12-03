@@ -2,21 +2,55 @@
    BASE -> typography
    ========================================================================= */
 
+// base
 
 body{
-	//
+	line-height: $g-lh;
+	font-family: $g-ff;
+	font-size: $g-fz;
+	font-weight: $g-fw;
 }
+
 
 // heading
-// @each $fz, $lh, $mb in $g-heading{
-// 	$index = index()
-// }
 
-
-a{
-	//
+@for $i from 1 through 6 {
+	h#{$i}, .h#{$i}{
+		font-size: 			nth(map-get($g-heading, 'fz'), $i);
+		font-weight: 		map-get($g-heading, 'fw');
+		line-height: 		nth(map-get($g-heading, 'lh'), $i);
+		margin-bottom: 	nth(map-get($g-heading, 'mb'), $i);
+	}
 }
 
+
+// link
+
+a{
+	color: map-get($g-link, 'color');
+	text-decoration: map-get($g-link, 'decoration');
+	&:hover,
+	&:focus,
+	&:visited,
+	&:active{
+		// color: map-get($g-link, 'color');
+	}
+	&:hover{
+		color: map-get($g-link, 'color-hover');
+		text-decoration: map-get($g-link, 'decoration-hover');
+	}
+}
+
+
+// bold
+
+b{
+	font-weight: $g-fw--dark;
+}
+
+
+// hr
+
 hr{
-	border-color: set-color($g-color, 'divider', 'dark');
+	border-color: $g-c-divider;
 }

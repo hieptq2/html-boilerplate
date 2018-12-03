@@ -2,6 +2,60 @@
    COMPONENTS -> button
    ========================================================================= */
 
+/**
+ * Custom bootstrap button, need to add class "btn"
+ */
+
 .c-button{
-	//
+	@include transition-property(color, background-color, border-color, box-shadow);
+	@include transition-timing-function(ease-in-out);
+	@include transition-timing-function();
+	&,
+	&:hover,
+	&:focus,
+	&:active,
+	&:visited{
+		text-decoration: none;
+		box-shadow: 0 0 0;
+	}
+
+	// colors
+	&--default{
+		@include button-color($g-c-text, $g-c-background--darker, transparent,
+													$g-c-text, darken($g-c-background--darker, 5%), transparent);
+	}
+	&--primary{
+		@include button-color(#fff, $g-c-primary, transparent,
+													#fff, $g-c-primary--darker);
+	}
+	&--secondary{
+		@include button-color(#fff, $g-c-secondary, transparent,
+													#fff, $g-c-secondary--darker);
+	}
+	
+
+	// social
+	&--social{
+		$self: &;
+		&--has-icon{
+			position: relative;
+			padding-left: 2.5rem + .75rem;
+			#{$self}__icon{
+				position: absolute;
+				top: 50%; margin-top: -14px;
+				left: 0;
+				width: 2.5rem;
+				line-height: 28px;
+				font-size: 1.25rem;
+				text-align: center;
+				border-right: 1px solid $g-c-divider--light;
+			}
+		}
+	}
+	@each $social-name, $social-color in map-get($g-colors, 'social'){
+		&--social--#{$social-name}{
+			@include button-color(#fff, $social-color, transparent,
+														#fff, darken($social-color, 5%), transparent);
+		}
+	}
 }

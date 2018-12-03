@@ -4,11 +4,14 @@
 
 
 // clear
+
 .h-clearfix{
 	@extend %clearfix;
 }
 
+
 // background
+
 .h-bg-cover{
 	@extend %bg-cover;
 }
@@ -16,12 +19,16 @@
 	@extend %bg-contain;
 }
 
+
 // size
+
 .h-fullsize{
 	@extend %fullsize;
 }
 
+
 // shadow
+
 .h-shadow-1{
 	box-shadow: 0 1px 3px 0 rgba(#000,.08);
 }
@@ -35,7 +42,9 @@
 	box-shadow: 0 4px 10px 0 rgba(#000,.2);
 }
 
-// shape
+
+// rectangle
+
 .h-rectangle{
 	position: relative;
 	display: block;
@@ -60,8 +69,10 @@
 	&--r916{ 	&:after { padding-bottom: 178%; } }
 }
 
+
 // image
-.h-img-fitin{
+
+.h-img-fit{
 	display: block;
 	text-align: center;
 	white-space: nowrap;
@@ -82,8 +93,24 @@
 	@extend %img-cover;
 }
 
+
 // text
+
 .h-text-oneline{
 	@include one-line-ellipsis();
 }
+
+@each $label, $size in map-get($g-fonts, 'size'){
+	.h-fz-#{$label}{
+		font-size: $size;
+	}
+}
+
+
+// form
+
+.h-resize-none{
+	resize: none;
+}
+
 

@@ -8,8 +8,11 @@
  */
 
 
+// ============================================================================
+
 /**
- * Grid
+ * Breakpoints & Grid
+ * (Bootstrap 4 default variables)
  */
 
 $g-breakpoints: (
@@ -19,36 +22,36 @@ $g-breakpoints: (
   'lg': 992px,
   'xl': 1200px
 );
+$g-container: (
+  'sm': 540px,
+  'md': 720px,
+  'lg': 960px,
+  'xl': 1140px
+);
+$g-gap: 16px;
 
 
-/*
+// ============================================================================
+
+/**
  * Colors
  */
 
-// solid colors
-$color: (
-	'red': (
-		'main': 		material-color('red','500'),
-		'darker': 	material-color('red','700'),
-		'lighter': 	material-color('red','300')
-	),
-	'blue': (
-		'main': 		material-color('blue','500'),
-		'darker': 	material-color('blue','700'),
-		'lighter': 	material-color('blue','300')
-	)
-);
-
-// theme colors
-$g-color :(
+$g-colors: (
 	'primary': (
-		'base': 		#333,
-		'darker': 	#000,
-		'lighter': 	#555
+		'base': 		#2196F3,
+		'darker': 	#1976D2,
+		'lighter': 	#64B5F6
+	),
+	'secondary': (
+		'base': 		#009688,
+		'darker': 	#00796B,
+		'lighter': 	#4DB6AC
 	),
 	'text': (
-		'base': 	material-color('grey','900'),
-		'sub': 		#777
+		'base': 		material-color('grey', '900'),
+		'sub': 			material-color('grey', '600'),
+		'disabled': material-color('grey', '400')
 	),
 	'background': (
 		'base': 		#f5f5f5,
@@ -56,34 +59,96 @@ $g-color :(
 		'darker': 	#eee
 	),
 	'divider': (
+		'base': 	rgba(#000, .08),
 		'light': 	rgba(#fff, .08),
 		'dark': 	rgba(#000, .08)
 	),
-	'state': (
-		// 'success': ,
-		// 'error': ,
-		// 'warning': ,
-		// 'info': ,
+	'form': (
+		'label': 									material-color('grey', '700'),
+		'text': 									material-color('grey', '900'),
+		'background':							#fff,
+		'text--readonly':					material-color('grey', '700'),
+		'background--readonly':		material-color('grey', '100'),
+		'text--disabled':					material-color('grey', '500'),
+		'background--disabled':		material-color('grey', '200'),
+		'placeholder': 						material-color('grey', '400'),
+		'border': 								material-color('grey', '300'),
+		'border--on-hover': 			material-color('grey', '300'),
+		'border--on-focus':				material-color('grey', '400')
 	),
 	'social': (
 		'facebook': 		#3b5999,
-		'googleplus': 	#dd4b39,
+		'google': 			#dd4b39,
 		'youtube':			#cd201f,
 		'twitter': 			#55acee,
-		'instagram': 		#e4405f
+		'instagram': 		#e4405f,
+		'skype':				#00AFF0,
+		'linkedin':			#007bb6,
+		'soundcloud': 	#ff3300
+	),
+	'solid': (
+		'red': 		material-color('red','500'),
+		'blue': 	material-color('blue','500')
 	),
 );
 
-
-/*
- * Font
+/**
+ * Retrieves a color value from the $g-color and $color map
  */
 
-$font-opensans: 'Open Sans', san-serif;
+@function set-color($color, $tone: 'base') {
+  $color: map-get(map-get($g-colors, $color), $tone);
+  @if $color {
+    @return $color;
+  }@else{
+    @warn "=> ERROR: COLOR NOT FOUND!";
+  }
+}
 
-$g-font: (
+/**
+ * Color variables from $g-colors map
+ */
+
+$g-c-primary: 						set-color('primary');
+$g-c-primary--darker: 		set-color('primary', 'darker');
+$g-c-primary--lighter: 		set-color('primary', 'lighter');
+
+$g-c-secondary: 					set-color('secondary');
+$g-c-secondary--darker: 	set-color('secondary', 'darker');
+$g-c-secondary--lighter: 	set-color('secondary', 'lighter');
+
+$g-c-text: 						set-color('text');
+$g-c-text--sub: 			set-color('text', 'sub');
+$g-c-text--disabled: 	set-color('text', 'disabled');
+
+$g-c-background:						set-color('background');
+$g-c-background--darker:		set-color('background', 'darker');
+$g-c-background--lighter:		set-color('background', 'lighter');
+
+$g-c-divider:						set-color('divider');
+$g-c-divider--dark:			set-color('divider', 'dark');
+$g-c-divider--light:		set-color('divider', 'light');
+
+
+
+// ============================================================================
+
+/**
+ * Fonts
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,500,700&subset=vietnamese');
+
+$font-serif: 				'Merriweather', serif;
+$font-sans-serif: 	'Noto Sans SC', sans-serif;;
+
+$font-main: 				$font-sans-serif;
+
+$g-fonts: (
 	'family': (
-		'base': 	$font-opensans
+		'base': 				$font-main,
+		'serif': 				$font-serif,
+		'sans-serif': 	$font-sans-serif
 	),
 	'size': (
 		'xxxl': 	1.4rem,				// 24px
@@ -99,48 +164,80 @@ $g-font: (
 	'weight': (
 		'light': 			300,
 		'base': 			400,
+		'medium': 		500,
 		'semibold': 	600,
 		'bold': 			700
 	),
 );
 
-
-/*
- * Line Height
- */
-$g-line-height: 1.5;
-
-
-/*
- * Heading
- * h1 to h6
+/** 
+ * Retrieves a font property value from the $g-fonts map
  */
 
+@function set-font($property, $value: 'base') {
+  $value: map-get(map-get($g-fonts, $property), $value);
+  @if $value {
+    @return $value;
+  }@else{
+    @warn '=> ERROR: FONT PROPERTY NOT FOUND!';
+  }
+}
+
+/**
+ * Font variables from $g-fonts map
+ */
+
+$g-ff:  						set-font('family');
+$g-ff--serif:  			set-font('family', 'serif');
+$g-ff--sans-serif:  set-font('family', 'sans-serif');
+
+$g-fz--xxxl: 		set-font('size', 'xxxl');
+$g-fz--xxl: 		set-font('size', 'xxl');
+$g-fz--xl: 			set-font('size', 'xl');
+$g-fz--lg: 			set-font('size', 'lg');
+$g-fz: 					set-font('size');
+$g-fz--sm: 			set-font('size', 'sm');
+$g-fz--xs: 			set-font('size', 'xs');
+$g-fz--xxs: 		set-font('size', 'xxs');
+$g-fz--xxxs: 		set-font('size', 'xxxs');
+
+$g-fw--lighter: 	set-font('weight', 'light');
+$g-fw: 						set-font('weight');
+$g-fw--dark: 			set-font('weight', 'medium');
+$g-fw--darker: 		set-font('weight', 'bold');
+
+
+// line-height
+$g-lh: 1.5;
+
+// heading
 $g-heading: (
-	'font-size': 			(2rem, 1.75rem, 1.5rem, 1.25rem, 1.125rem, 1rem),
-	'font-weight': 		set-font($g-font, 'weight', 'semibold'),
-	'line-height': 		(1.2, 1.2, 1.25, 1.25, 1.5, 1.5),
-	'margin-bottom': 	(1.5rem, 1.25rem, 1.25rem, 1rem, 1rem 1rem)
+	'fz': (2rem, 1.75rem, 1.5rem, 1.25rem, 1.125rem, 1rem),
+	'fw': $g-fw--dark,
+	'lh': (1.25, 1.25, 1.375, 1.375, 1.5, 1.5),
+	'mb': (1.5rem, 1.5rem, 1.25rem, 1.25rem, 1rem, 1rem)
 );
 
-/*
- * Link
- */
-
+// link
 $g-link: (
-	'color' 						: set-color($g-color, 'primary'),
-	'color--hover' 			: set-color($g-color, 'primary', 'darker'),
+	'color' 						: $g-c-primary,
+	'color-hover' 			: $g-c-primary,
 	'decoration' 				: none,
 	'decoration-hover' 	: none,
 );
 
+// border
+$g-border: 1px solid $g-c-divider;
 
-/*
+
+// ============================================================================
+
+/**
  * Easings
  */
 
 $g-easing: (
-	'ease-linear':           	linear,
+	'linear':           			linear,
 	'ease-in-out':           	ease-in-out, 
 	'ease-in-out-cubic':     	cubic-bezier(0.645, 0.045, 0.355, 1.000), 
 	'ease-in-out-quart':     	cubic-bezier(0.770, 0.000, 0.175, 1.000),
@@ -150,11 +247,15 @@ $g-easing: (
 );
 
 
-/*
+// ============================================================================
+
+/**
  * Z-index
  */
 
 $g-z-index: (
+
+	// Bootstrap default
 	'header': 					1000,
 	'sticky':           1020,
 	'fixed':            1030,
@@ -162,4 +263,9 @@ $g-z-index: (
 	'modal':            1050,
 	'popover':          1060,
 	'tooltip':          1070
+
+	// Custom
 );
+
+
+// ============================================================================
