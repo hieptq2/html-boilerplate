@@ -29,6 +29,10 @@ body{
 a{
 	color: map-get($g-link, 'color');
 	text-decoration: map-get($g-link, 'decoration');
+	@include transition(color .1s ease-in-out, 
+											background-color .1s ease-in-out, 
+											border-color .1s ease-in-out,
+											opacity .1s ease-in-out);
 	&:hover,
 	&:focus,
 	&:visited,

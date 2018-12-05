@@ -7,9 +7,10 @@
  */
 
 .c-button{
-	@include transition-property(color, background-color, border-color, box-shadow);
-	@include transition-timing-function(ease-in-out);
-	@include transition-timing-function();
+	@include transition(color .1s ease-in-out, 
+											background-color .1s ease-in-out, 
+											border-color .1s ease-in-out,
+											box-shadow .1s ease-in-out);
 	&,
 	&:hover,
 	&:focus,
@@ -18,19 +19,35 @@
 		text-decoration: none;
 		box-shadow: 0 0 0;
 	}
-
+	& > i{
+		display: inline-block;
+		vertical-align: baseline;
+		line-height: 1;
+	}
 	// colors
 	&--default{
 		@include button-color($g-c-text, $g-c-background--darker, transparent,
 													$g-c-text, darken($g-c-background--darker, 5%), transparent);
 	}
+	&--default-outline{
+		@include button-color($g-c-text, #fff, set-color('form', 'border'),
+													$g-c-text, $g-c-background--lighter);
+	}
 	&--primary{
 		@include button-color(#fff, $g-c-primary, transparent,
 													#fff, $g-c-primary--darker);
 	}
+	&--primary-outline{
+		@include button-color($g-c-primary, #fff, $g-c-primary,
+													$g-c-primary, $g-c-background--lighter, $g-c-primary--darker);
+	}
 	&--secondary{
 		@include button-color(#fff, $g-c-secondary, transparent,
 													#fff, $g-c-secondary--darker);
+	}
+	&--secondary-outline{
+		@include button-color($g-c-secondary, #fff, $g-c-secondary,
+													$g-c-secondary, $g-c-background--lighter, $g-c-secondary--darker);
 	}
 	
 

@@ -87,8 +87,12 @@ $g-colors: (
 		'soundcloud': 	#ff3300
 	),
 	'solid': (
-		'red': 		material-color('red','500'),
-		'blue': 	material-color('blue','500')
+		'black': 		#000,
+		'white': 		#fff,
+		'red': 			material-color('red','500'),
+		'blue': 		material-color('blue','500'),
+		'green': 		material-color('green','500'),
+		'orange': 	material-color('orange','500'),
 	),
 );
 

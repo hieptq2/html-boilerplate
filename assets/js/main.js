@@ -25,8 +25,11 @@
         'libs/jquery.easing.min'
       ],	
       'swiper': [
-        // https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.min.js
+        // https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.min.js,
         'libs/swiper.min'
+      ],
+      'select2': [
+        'libs/select2.full.min'
       ],
 
       // modules
@@ -34,7 +37,7 @@
       'header':         'modules/header',
       'footer':         'modules/footer',
 
-      'home':           'modules/home',
+      'components':     'modules/components',
     },
 
     shim:{
@@ -58,8 +61,8 @@
         deps: ['jquery', 'bootstrap']
       },
 
-      'home':{
-        deps: ['jquery', 'bootstrap', 'swiper', 'easing']
+      'components':{
+        deps: ['jquery', 'bootstrap', 'swiper', 'easing', 'select2']
       },
       
     }
@@ -77,11 +80,11 @@
     // Global module
     base.init();
     header.init();
-    // footer.init();
+    footer.init();
 
     // Page specific module
     var currentModule = $('#SiteContent').attr('data-js-module');
-    var listModules = ['home'];
+    var listModules = ['components'];
 
     if (currentModule && $.inArray(currentModule, listModules) !== -1) {
       require([currentModule], function (currentModule) {

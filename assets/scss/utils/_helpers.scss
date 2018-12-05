@@ -27,6 +27,37 @@
 }
 
 
+// colors
+.h-c-primary{
+	color: $g-c-primary !important;
+}
+.h-c-secondary{
+	color: $g-c-secondary !important;
+}
+
+.h-c-text{
+	color: $g-c-text !important;
+}
+.h-c-text--sub{
+	color: $g-c-text--sub !important;
+}
+.h-c-text--disabled{
+	color: $g-c-text--disabled !important;
+}
+
+@each $color, $hex in map-get($g-colors, 'solid'){
+	.h-c-#{$color}{
+		color: $hex !important;
+	}
+	.h-bgc-#{$color}{
+		background-color: $hex !important;
+	}
+	.h-bdc-#{$color}{
+		border-color: $hex !important;
+	}
+}
+
+
 // shadow
 
 .h-shadow-1{
@@ -102,7 +133,7 @@
 
 @each $label, $size in map-get($g-fonts, 'size'){
 	.h-fz-#{$label}{
-		font-size: $size;
+		font-size: $size !important;
 	}
 }
 
@@ -111,6 +142,19 @@
 
 .h-resize-none{
 	resize: none;
+}
+
+
+// custom
+
+.h-outline-none{
+	&,
+	&:hover,
+	&:active,
+	&:focus,
+	&:visited{
+		outline: none;
+	}
 }
 
 

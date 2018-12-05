@@ -1,12 +1,12 @@
 define([], function(){
   'use strict';
 
-  console.log('before | module: header');
+  // console.log('before init | module: header');
 
   var header = (function(){
     var init = function(){
 
-      console.log('module: header');
+      // console.log('module: header');
 
     };
 
