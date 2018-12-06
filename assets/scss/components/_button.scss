@@ -38,16 +38,16 @@
 													#fff, $g-c-primary--darker);
 	}
 	&--primary-outline{
-		@include button-color($g-c-primary, #fff, $g-c-primary,
-													$g-c-primary, $g-c-background--lighter, $g-c-primary--darker);
+		@include button-color($g-c-primary--darker, #fff, $g-c-primary,
+													$g-c-primary--darker, $g-c-background--lighter, $g-c-primary--darker);
 	}
 	&--secondary{
 		@include button-color(#fff, $g-c-secondary, transparent,
 													#fff, $g-c-secondary--darker);
 	}
 	&--secondary-outline{
-		@include button-color($g-c-secondary, #fff, $g-c-secondary,
-													$g-c-secondary, $g-c-background--lighter, $g-c-secondary--darker);
+		@include button-color($g-c-secondary--darker, #fff, $g-c-secondary,
+													$g-c-secondary--darker, $g-c-background--lighter, $g-c-secondary--darker);
 	}
 	
 
@@ -74,5 +74,10 @@
 			@include button-color(#fff, $social-color, transparent,
 														#fff, darken($social-color, 5%), transparent);
 		}
+	}
+
+	&.disabled, 
+	&:disabled{
+		opacity: .6;
 	}
 }

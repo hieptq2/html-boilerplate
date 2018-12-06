@@ -67,7 +67,7 @@
 /**
  * Fonts
  */
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,500,700&subset=vietnamese");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400,500,700&subset=vietnamese");
 /** 
  * Retrieves a font property value from the $g-fonts map
  */
@@ -172,11 +172,19 @@
    UTILS -> helpers
    ========================================================================= */
 .h-c-primary {
-  color: #2196F3 !important;
+  color: #3f51b5 !important;
 }
 
 .h-c-secondary {
-  color: #009688 !important;
+  color: #00bcd4 !important;
+}
+
+.h-bgc-primary {
+  background-color: #3f51b5 !important;
+}
+
+.h-bgc-secondary {
+  background-color: #00bcd4 !important;
 }
 
 .h-c-text {
@@ -184,7 +192,7 @@
 }
 
 .h-c-text--sub {
-  color: #757575 !important;
+  color: #9e9e9e !important;
 }
 
 .h-c-text--disabled {
@@ -351,40 +359,56 @@
   white-space: nowrap;
 }
 
-.h-fz-xxxl {
+.h-fz--xxxl {
   font-size: 1.4rem !important;
 }
 
-.h-fz-xxl {
+.h-fz--xxl {
   font-size: 1.375rem !important;
 }
 
-.h-fz-xl {
+.h-fz--xl {
   font-size: 1.25rem !important;
 }
 
-.h-fz-lg {
+.h-fz--lg {
   font-size: 1.125rem !important;
 }
 
-.h-fz-base {
+.h-fz--base {
   font-size: 1rem !important;
 }
 
-.h-fz-sm {
+.h-fz--sm {
   font-size: 0.875rem !important;
 }
 
-.h-fz-xs {
+.h-fz--xs {
   font-size: 0.75rem !important;
 }
 
-.h-fz-xxs {
+.h-fz--xxs {
   font-size: 0.6875rem !important;
 }
 
-.h-fz-xxxs {
+.h-fz--xxxs {
   font-size: 0.625rem !important;
+}
+
+.h-fw--light {
+  font-weight: 300;
+}
+
+.h-fw {
+  font-weight: 400;
+}
+
+.h-fw--dark {
+  font-weight: 500;
+}
+
+.h-fw--darker {
+  font-weight: 700;
 }
 
 .h-resize-none {
@@ -393,6 +417,14 @@
 
 .h-outline-none, .h-outline-none:hover, .h-outline-none:active, .h-outline-none:focus, .h-outline-none:visited {
   outline: none;
+}
+
+.h-bdrd {
+  border-radius: 2px;
+}
+
+.h-bdrd-circle {
+  border-radius: 50%;
 }
 
 /* ============================================================================
@@ -407,6 +439,10 @@
 body {
   color: #212121;
   background-color: #f5f5f5;
+}
+
+[disabled] {
+  pointer-events: none;
 }
 
 /* ============================================================================
@@ -462,7 +498,7 @@ h6, .h6 {
 }
 
 a {
-  color: #2196F3;
+  color: #3f51b5;
   text-decoration: none;
   -moz-transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, opacity 0.1s ease-in-out;
   -o-transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, opacity 0.1s ease-in-out;
@@ -470,7 +506,7 @@ a {
   transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, opacity 0.1s ease-in-out;
 }
 a:hover {
-  color: #2196F3;
+  color: #3f51b5;
   text-decoration: none;
 }
 
@@ -480,6 +516,13 @@ b {
 
 hr {
   border-color: rgba(0, 0, 0, 0.08);
+}
+
+mark,
+.mark {
+  padding-left: .25rem;
+  padding-right: .25rem;
+  background-color: #d9dcf2;
 }
 
 /* ============================================================================
@@ -492,6 +535,34 @@ hr {
  * - Classes are started with '.c-'
  * - Imported files are order alphabetically
  */
+/* ============================================================================
+   COMPONENTS -> guide
+   ========================================================================= */
+.c-guide--color {
+  margin: 0 0 1rem;
+}
+.c-guide--color .c-guide__display {
+  width: 96px;
+  height: 96px;
+}
+.c-guide--color .c-guide__content {
+  margin: .75rem 0 0;
+  padding: 0 1rem;
+  text-align: center;
+}
+.c-guide--color .c-guide__title {
+  margin: 0 0 .25rem;
+  font-size: 0.875rem;
+}
+.c-guide--color .c-guide__subtitle {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #9e9e9e;
+}
+.c-guide--color .c-guide__code--color-primary:after {
+  content: "#3f51b5";
+}
+
 /* ============================================================================
    COMPONENTS -> breadcrumb
    ========================================================================= */
@@ -522,7 +593,7 @@ hr {
   color: #757575;
 }
 .c-breadcrumb__item a:hover {
-  color: #2196F3;
+  color: #3f51b5;
 }
 
 /* ============================================================================
@@ -574,52 +645,52 @@ hr {
 }
 .c-button--primary {
   color: #fff;
-  background-color: #2196F3;
+  background-color: #3f51b5;
   border-color: transparent;
 }
 .c-button--primary:not(:disabled):not(.disabled):hover {
   color: #fff;
-  background-color: #1976D2;
+  background-color: #303f9f;
   border-color: transparent;
 }
 .c-button--primary:not(:disabled):not(.disabled):active {
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 .c-button--primary-outline {
-  color: #2196F3;
+  color: #303f9f;
   background-color: #fff;
-  border-color: #2196F3;
+  border-color: #3f51b5;
 }
 .c-button--primary-outline:not(:disabled):not(.disabled):hover {
-  color: #2196F3;
+  color: #303f9f;
   background-color: #fafafa;
-  border-color: #1976D2;
+  border-color: #303f9f;
 }
 .c-button--primary-outline:not(:disabled):not(.disabled):active {
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 .c-button--secondary {
   color: #fff;
-  background-color: #009688;
+  background-color: #00bcd4;
   border-color: transparent;
 }
 .c-button--secondary:not(:disabled):not(.disabled):hover {
   color: #fff;
-  background-color: #00796B;
+  background-color: #0097a7;
   border-color: transparent;
 }
 .c-button--secondary:not(:disabled):not(.disabled):active {
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.08);
 }
 .c-button--secondary-outline {
-  color: #009688;
+  color: #0097a7;
   background-color: #fff;
-  border-color: #009688;
+  border-color: #00bcd4;
 }
 .c-button--secondary-outline:not(:disabled):not(.disabled):hover {
-  color: #009688;
+  color: #0097a7;
   background-color: #fafafa;
-  border-color: #00796B;
+  border-color: #0097a7;
 }
 .c-button--secondary-outline:not(:disabled):not(.disabled):active {
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.08);
@@ -743,6 +814,9 @@ hr {
 .c-button--social--soundcloud:not(:disabled):not(.disabled):active {
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.08);
 }
+.c-button.disabled, .c-button:disabled {
+  opacity: .6;
+}
 
 /* ============================================================================
    COMPONENTS -> card
@@ -776,7 +850,7 @@ hr {
 }
 .c-dropdown-menu__item.active {
   color: #fff;
-  background-color: #2196F3;
+  background-color: #3f51b5;
 }
 .c-dropdown-menu__item.disabled {
   color: #bdbdbd;
@@ -784,7 +858,7 @@ hr {
 }
 .c-dropdown-menu__header {
   padding: 0.375rem 1rem;
-  color: #757575;
+  color: #9e9e9e;
   font-weight: 500;
 }
 .c-dropdown-menu__divider {
@@ -899,7 +973,7 @@ hr {
 .c-form__help-text {
   margin: .25rem 0 0;
   font-size: 0.75rem;
-  color: #757575;
+  color: #9e9e9e;
 }
 
 /**
@@ -957,7 +1031,7 @@ hr {
   opacity: .6;
 }
 .c-form-option__input:checked ~ .c-form-option__label {
-  border-color: #2196F3;
+  border-color: #3f51b5;
 }
 .c-form-option__input:checked ~ .c-form-option__label:before, .c-form-option__input:checked ~ .c-form-option__label:after {
   opacity: 1;
@@ -968,7 +1042,7 @@ hr {
   height: 0;
   border-style: solid;
   border-width: 0 0 20px 20px;
-  border-color: transparent transparent #2196F3 transparent;
+  border-color: transparent transparent #3f51b5 transparent;
 }
 .c-form-option__label {
   position: relative;
@@ -1046,8 +1120,8 @@ hr {
 }
 .c-pagination__item.active .c-pagination__link {
   color: #fff;
-  background-color: #009688;
-  border-color: #009688;
+  background-color: #00bcd4;
+  border-color: #00bcd4;
 }
 .c-pagination__item.disabled .c-pagination__link {
   color: #e0e0e0;
@@ -1069,9 +1143,10 @@ hr {
   line-height: 1.5rem;
   font-size: 0.875rem;
   text-align: center;
+  white-space: nowrap;
 }
 .c-pagination__link {
-  color: #757575;
+  color: #9e9e9e;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 0;
@@ -1083,12 +1158,12 @@ hr {
 }
 .c-pagination__link--next-page {
   color: #fff;
-  background-color: #2196F3;
+  background-color: #3f51b5;
   border-color: transparent;
 }
 .c-pagination__link--next-page:not(:disabled):not(.disabled):hover {
   color: #fff;
-  background-color: #1976D2;
+  background-color: #303f9f;
   border-color: transparent;
 }
 .c-pagination__link--next-page:not(:disabled):not(.disabled):active {
@@ -1099,7 +1174,7 @@ hr {
   background-color: #f5f5f5;
 }
 .c-pagination__ellipsis {
-  color: #757575;
+  color: #9e9e9e;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   cursor: default;
@@ -1118,6 +1193,24 @@ hr {
 /* ============================================================================
    COMPONENTS -> table
    ========================================================================= */
+.c-table th,
+.c-table td {
+  border-top-color: #e0e0e0;
+}
+.c-table thead th {
+  border-bottom-color: #e0e0e0;
+}
+.c-table tbody + tbody {
+  border-top-color: #e0e0e0;
+}
+.c-table.table-bordered {
+  border-color: #e0e0e0;
+}
+.c-table.table-bordered th,
+.c-table.table-bordered td {
+  border-color: #e0e0e0;
+}
+
 /* ============================================================================
    COMPONENTS -> tooltip
    ========================================================================= */
@@ -1247,7 +1340,7 @@ hr {
 
 .select2-container--default .select2-results__option[aria-selected=true] {
   color: #fff;
-  background-color: #64B5F6;
+  background-color: #7986cb;
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
@@ -1331,11 +1424,56 @@ hr {
 /* ============================================================================
    LAYOUT -> header
    ========================================================================= */
+.l-header--guide .l-header__logo {
+  padding-right: 1rem;
+  margin-right: 0.5rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+.l-header--guide .l-header__logo img {
+  display: block;
+  height: 48px;
+  width: auto;
+}
+.l-header--guide .l-header__title {
+  font-size: 1.375rem;
+  font-weight: 300;
+  color: #9e9e9e;
+}
+.l-header--guide .l-header__credit {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: #9e9e9e;
+}
+
 /* ============================================================================
    LAYOUT -> footer
    ========================================================================= */
 /* ============================================================================
    LAYOUT -> grid
+   ========================================================================= */
+/* ============================================================================
+   LAYOUT -> guide
+   ========================================================================= */
+.l-guide__title {
+  margin: 0 0 2rem;
+  font-size: 1.125rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.l-guide__title span {
+  display: inline-block;
+  vertical-align: top;
+  padding: .5rem .75rem;
+  color: #fff;
+  background-color: #000;
+}
+.l-guide + hr {
+  margin: 3rem 0;
+}
+
+/* ============================================================================
+   LAYOUT -> media
    ========================================================================= */
 /* ============================================================================
    PAGES

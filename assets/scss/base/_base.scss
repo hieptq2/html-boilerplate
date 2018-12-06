@@ -7,3 +7,7 @@ body{
 	color: $g-c-text;
 	background-color: $g-c-background;
 }
+
+[disabled]{
+	pointer-events: none;
+}

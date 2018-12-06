@@ -1,0 +1,26 @@
+/* ============================================================================
+   LAYOUT -> guide
+   ========================================================================= */
+
+$c--guider-title: material-color('grey', '500');
+
+.l-guide{
+	$self: &;
+	&__title{
+		margin: 0 0 2rem;
+		font-size: 1.125rem;
+		font-weight: $g-fw--light;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		span{
+			display: inline-block;
+			vertical-align: top;
+			padding: .5rem .75rem;
+			color: #fff;
+			background-color: #000;
+		}
+	}
+	& + hr{
+		margin: 3rem 0;
+	}
+}

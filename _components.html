@@ -8,7 +8,7 @@
   <meta name="keywords" content="html, css, js, bootstrap, sass, requirejs, bem">
   <meta name="author" content="Hiep Ta | henry9.com | contact@henry9.com">
 
-	<title>Title | Site Name</title>
+	<title>Style Guide | Site Name</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="assets/img/favicon.ico">
@@ -26,392 +26,628 @@
 
 <body>
 	<div id="SiteContainer" class="site-container page-home">
-		<header id="SiteHeader" class="l-header">
+		<header id="SiteHeader" class="l-header l-header--guide">
 			<div class="container">
-				
+				<div class="row align-items-center justify-content-between text-center text-md-left my-3">
+					<div class="l-header__logo col-12 col-md-auto"><img src="samples/logo-style-guide.png" alt=""></div>
+					<div class="l-header__title col my-3">Web style guide</div>
+					<div class="l-header__credit col-md-auto my-3">by <b>Hiep Ta</b> &#160;&#8212;&#160; <i>contact@henry9.com</i></div>
+				</div>
 			</div>
 		</header>
-		<div id="SiteContent" class="l-content" data-js-module="components">
+		<div id="SiteContent" class="l-content l-content--guide" data-js-module="components">
 			<div class="container">
 				<div class="c-card h-shadow-1 my-3 p-3">
-				  <ol class="c-breadcrumb mb-3">
-				    <li class="c-breadcrumb__item"><a href="#">Home</a></li>
-				    <li class="c-breadcrumb__item"><a href="#">Library</a></li>
-				    <li class="c-breadcrumb__item active">Data</li>
+<!-- 				  <ol class="c-breadcrumb mb-3">
+				    <li class="c-breadcrumb__item"><a href="#">HTML</a></li>
+				    <li class="c-breadcrumb__item"><a href="#">Breadcrumb</a></li>
+				    <li class="c-breadcrumb__item"><a href="#">Sample</a></li>
+				    <li class="c-breadcrumb__item active">Style Guide</li>
 				  </ol>
-					<h3>Typography</h3>
-					<div>
-						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
-						<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl. Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem.</p>
-						<p>Tôi sẽ nhớ những ngày nắng lang thang khắp ngõ ngách ở thành phố Vienna (Áo) hay buổi chiều tản bộ bên dòng sông Seine (Pháp) thơ mộng. Những lúc ngồi trên chiếc thuyền nho nhỏ, thả mình vào bản nhạc du dương và nhẹ nhàng, len lỏi khắp các kênh đào ngắm nhìn thành phố của tình yêu khiến tôi nhận ra Venice (Italy) thật đẹp và lãng mạn. Suốt 22 ngày, tôi hạnh phúc khi rong chơi đến những vùng đất mình tự gọi là tiên cảnh hạ giới, để lại dấu chân qua ngôi làng cổ Hallstatt (Áo), hít mùi hương mát lạnh khi đứng trước dãy núi trùng điệp và hùng vĩ ở Thụy Sĩ...</p>
-					</div>
-					<hr>
-					<h3>Button</h3>
-					<div>
-						<p>
-							<button type="button" class="btn c-button c-button--default">Default</button>
-							<button type="button" class="btn c-button c-button--default-outline">Outline</button>
-							<button type="button" class="btn c-button c-button--primary">Primary</button>
-							<button type="button" class="btn c-button c-button--primary-outline">Outline</button>
-							<button type="button" class="btn c-button c-button--secondary">Secondary</button>
-							<button type="button" class="btn c-button c-button--secondary-outline">Outline</button>
-							<button type="button" class="btn c-button c-button--default" disabled>Disabled</button>
-							<button type="button" class="btn c-button c-button--primary" disabled>Disabled</button>
-							<button type="button" class="btn c-button c-button--secondary" disabled>Disabled</button>
-							<button type="button" class="btn c-button c-button--default"><i class="mdi mdi-home"></i></button>
-							<button type="button" class="btn c-button c-button--primary"><i class="mdi mdi-city mr-2"></i>Icon</button>
-							<button type="button" class="btn c-button c-button--secondary">Icon<i class="mdi mdi-checkerboard ml-2"></i></button>
-						</p>
-						<p>
-							<button type="button" class="btn btn-sm c-button c-button--default">Size sm</button>
-							<button type="button" class="btn c-button c-button--default">Size df</button>
-							<button type="button" class="btn btn-lg c-button c-button--default">Size lg</button>
-						</p>
-						<div class="row">
-							<div class="col col-sm-6 col-xl-3">
-								<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--facebook"><i class="c-button--social__icon mdi mdi-facebook"></i>Sign in with Facebook</button>
-							</div>
-							<div class="col col-sm-6 col-xl-3">
-								<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--twitter"><i class="c-button--social__icon mdi mdi-twitter"></i>View on Twitter</button>
-							</div>
-							<div class="col col-sm-6 col-xl-3">
-								<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--google"><i class="c-button--social__icon mdi mdi-google"></i>Continue with Google</button>
-							</div>
-							<div class="col col-sm-6 col-xl-3">
-								<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--instagram"><i class="c-button--social__icon mdi mdi-instagram"></i>Connect with Instagram</button>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col col-sm-6 col-xl-3">
-								<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--youtube"><i class="c-button--social__icon mdi mdi-youtube"></i>View Youtube Channel</button>
-							</div>
-							<div class="col col-sm-6 col-xl-3">
-								<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--skype"><i class="c-button--social__icon mdi mdi-skype"></i>Chat on Skype</button>
-							</div>
-							<div class="col col-sm-6 col-xl-3">
-								<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--linkedin"><i class="c-button--social__icon mdi mdi-linkedin"></i>View profile on Linkedin</button>
-							</div>
-							<div class="col col-sm-6 col-xl-3">
-								<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--soundcloud"><i class="c-button--social__icon mdi mdi-soundcloud"></i>Listen on Soundcloud</button>
-							</div>
-						</div>
-					</div>
-					<hr>
-					<h3>Dropdowns</h3>
-					<div>
-						<div class="dropdown c-dropdown d-inline-block">
-						  <button class="btn c-button c-button--default" type="button" data-toggle="dropdown">Dropdown <i class="mdi mdi-chevron-down"></i></button>
-						  <div class="dropdown-menu c-dropdown-menu h-shadow-3">
-						    <a href="#" class="dropdown-item c-dropdown-menu__item active">Action</a>
-						    <a href="#" class="dropdown-item c-dropdown-menu__item">Another action</a>
-						    <div class="c-dropdown-menu__divider"></div>
-						    <a href="#" class="dropdown-item c-dropdown-menu__item disabled">Something else here</a>
+				  <hr> -->
+				  <div class="l-guide">
+				  	<h1 class="l-guide__title"><span>Color Palette</span></h1>
+						<div class="l-guide__content">
+							<div class="row">
+						  	<div class="col-3 col-md-auto">
+							  	<div class="c-guide c-guide--color">
+								  	<div class="c-guide__display">
+								  		<div class="h-rectangle">
+								  			<div class="h-rectangle__inner h-bgc-primary h-bdrd-circle"></div>
+								  		</div>
+								  	</div>
+								  	<div class="c-guide__content">
+											<div class="c-guide__title">Green</div>
+											<div class="c-guide__subtitle">#4caf50</div>
+											<div class="c-guide__subtitle"><i>Primary</i></div>
+								  	</div>
+								  </div>
+						  	</div>
+						  	<div class="col-3 col-md-auto">
+							  	<div class="c-guide c-guide--color">
+								  	<div class="c-guide__display">
+								  		<div class="h-rectangle">
+								  			<div class="h-rectangle__inner h-bgc-secondary h-bdrd-circle"></div>
+								  		</div>
+								  	</div>
+								  	<div class="c-guide__content">
+											<div class="c-guide__title">Cyan</div>
+											<div class="c-guide__subtitle">#4caf50</div>
+											<div class="c-guide__subtitle"><i>Secondary</i></div>
+								  	</div>
+								  </div>
+						  	</div>
+						  	<div class="col-3 col-md-auto">
+						  		<div class="c-guide c-guide--color">
+								  	<div class="c-guide__display">
+								  		<div class="h-rectangle">
+								  			<div class="h-rectangle__inner h-bgc-secondary h-bdrd-circle"></div>
+								  		</div>
+								  	</div>
+								  	<div class="c-guide__content">
+											<div class="c-guide__title">Grey</div>
+											<div class="c-guide__subtitle">#4caf50</div>
+											<div class="c-guide__subtitle"><i>Secondary</i></div>
+								  	</div>
+								  </div>
+						  	</div>
+						  	<div class="col-3 col-md"></div>
+						  	<div class="col-3 col-md"></div>
+						  	<div class="col-3 col-md"></div>
 						  </div>
 						</div>
-						<div class="dropdown c-dropdown d-inline-block">
-						  <button class="btn btn-sm c-button c-button--default" type="button" data-toggle="dropdown">Dropdown SM <i class="mdi mdi-chevron-down"></i></button>
-						  <div class="dropdown-menu dropdown-menu-right c-dropdown-menu c-dropdown-menu--sm h-shadow-3">
-						    <a href="#" class="dropdown-item c-dropdown-menu__item active">Action</a>
-						    <a href="#" class="dropdown-item c-dropdown-menu__item">Another action</a>
-						    <div class="c-dropdown-menu__divider"></div>
-						    <a href="#" class="dropdown-item c-dropdown-menu__item disabled">Something else here</a>
-						  </div>
+				  </div>
+				  <hr>
+				  <div class="l-guide">
+				  	<h1 class="l-guide__title"><span>Typography</span></h1>
+				  	<div class="l-guide__content">
+					  	<div class="row">
+								<div class="col-12 col-md-4">
+									<h1>h1 - Headline 1</h1>
+									<h2>h2 - Headline 2</h2>
+									<h3>h3 - Headline 3</h3>
+									<h4>h4 - Headline 4</h4>
+									<h5>h5 - Headline 5</h5>
+									<h6>h6 - Headline 6</h6>
+									<p>
+										<a href="#">link inline</a>
+										<br><mark>highlight</mark>
+										<br><del>deleted text</del>
+										<br><s>no longer accurate</s>
+										<br><ins>addition to the document</ins>
+										<br><u>underlined</u>
+										<br><small>fine print</small>
+										<br><strong>bold text</strong>
+										<br><em>italicized text</em>
+									</p>
+								</div>
+								<div class="col-12 col-md-8">
+									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor.</p>
+									<p>Tôi sẽ nhớ những ngày nắng lang thang khắp ngõ ngách ở thành phố Vienna (Áo) hay buổi chiều tản bộ bên dòng sông Seine (Pháp) thơ mộng. Những lúc ngồi trên chiếc thuyền nho nhỏ, thả mình vào bản nhạc du dương và nhẹ nhàng, len lỏi khắp các kênh đào ngắm nhìn thành phố của tình yêu khiến tôi nhận ra Venice (Italy) thật đẹp và lãng mạn.</p>
+									<p class="h-fz--sm">Smaller text size, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. Tôi sẽ nhớ những ngày nắng lang thang khắp ngõ ngách ở thành phố Vienna (Áo) hay buổi chiều tản bộ bên dòng sông Seine (Pháp) thơ mộng.</p>
+									<p class="h-fz--lg">Larger text size, Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque aliquet nibh nec urna. Tôi sẽ nhớ những ngày nắng lang thang khắp ngõ ngách ở thành phố Vienna (Áo) hay buổi chiều tản bộ bên dòng sông Seine (Pháp) thơ mộng.</p>
+									<ul>
+									  <li>Lorem ipsum dolor sit amet</li>
+									  <li>Consectetur adipiscing elit</li>
+									  <li>Integer molestie lorem at massa</li>
+									    <ul>
+									      <li>Phasellus iaculis neque</li>
+									      <li>Purus sodales ultricies</li>
+									    </ul>
+									  </li>
+									  <li>Faucibus porta lacus fringilla vel</li>
+									  <li>Aenean sit amet erat nunc</li>
+									</ul>
+									<p>Text alignment: <span class="text-monospace">text-{sm,md,lg,xl}-{left,center,right}</span></p>
+									<p>Text wrapping and overflow: <span class="text-monospace">.text-nowrap, .text-truncate</span></p>
+									<p>Text transform: <span class="text-monospace">.text-lowercase, .text-uppercase, text-capitalize</span></p>
+									<p>Font weight and italics: <span class="text-monospace">.h-fw--light, .h-fw, .h-fw--dark, .h-fw--darker</span></p>
+									<p>Monospace: <span class="text-monospace">.text-monospace</span></p>
+									<p>Text-size: <span class="text-monospace">.h-fz--{xxxs-xxxl}</span></p>
+								</div>
+							</div>
 						</div>
-						<div class="dropdown c-dropdown d-inline-block">
-						  <button class="btn c-button c-button--default" type="button" data-toggle="dropdown">More Options <i class="mdi mdi-chevron-down"></i></button>
-						  <div class="dropdown-menu c-dropdown-menu h-shadow-3" style="width: 240px">
-						  	<h6 class="dropdown-header c-dropdown-menu__header">Dropdown header</h6>
-						    <form class="px-3 py-2">
-							    <div class="form-group mb-2">
-							      <label for="#" class="c-form__label c-form__label--sm">Email address</label>
-							      <input type="email" class="form-control form-control-sm c-form__control" placeholder="email@example.com">
-							    </div>
-							    <div class="form-group mb-2">
-							      <label for="#" class="c-form__label c-form__label--sm">Password</label>
-							      <input type="password" class="form-control form-control-sm c-form__control" placeholder="Password">
-							    </div>
-							    <div class="form-group mb-2">
-								    <div class="form-check c-form-check c-form-check--sm">
-								      <input type="checkbox" class="form-check-input c-form-check__input" id="dropdownCheck">
-								      <label class="form-check-label c-form-check__label" for="dropdownCheck">Remember me</label>
+				  </div>
+				  <hr>
+				  <div class="l-guide">
+				  	<h1 class="l-guide__title"><span>Table</span></h1>
+				  	<div class="l-guide__content">
+				  		<table class="table table-bordered c-table">
+							  <thead>
+							    <tr>
+							      <th scope="col">#</th>
+							      <th scope="col">First</th>
+							      <th scope="col">Last</th>
+							      <th scope="col">Handle</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <th scope="row">1</th>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">2</th>
+							      <td>Jacob</td>
+							      <td>Thornton</td>
+							      <td>@fat</td>
+							    </tr>
+							    <tr>
+							      <th scope="row">3</th>
+							      <td>Larry</td>
+							      <td>the Bird</td>
+							      <td>@twitter</td>
+							    </tr>
+							  </tbody>
+							</table>
+				  	</div>
+				  </div>
+				  <hr>
+				  <div class="l-guide">
+				  	<h1 class="l-guide__title"><span>Iconography</span></h1>
+				  	<div class="l-guide__content">
+			  			<div class="h-fz--xxxl mb-2">
+			  				<i class="c-icon mdi mdi-home"></i>
+			  				<i class="c-icon mdi mdi-cards-heart"></i>
+			  				<i class="c-icon mdi mdi-airplane-takeoff"></i>
+			  				<i class="c-icon mdi mdi-alarm"></i>
+			  				<i class="c-icon mdi mdi-alert-circle"></i>
+			  				<i class="c-icon mdi mdi-angle-acute"></i>
+			  				<i class="c-icon mdi mdi-arrange-send-backward"></i>
+			  				<i class="c-icon mdi mdi-arrow-down-bold-circle"></i>
+			  				<i class="c-icon mdi mdi-auto-fix"></i>
+			  				<i class="c-icon mdi mdi-bullseye"></i>
+			  				<span class="mx-3">|</span>
+			  				<i class="c-icon mdi mdi-alpha-h-box"></i>
+			  				<i class="c-icon mdi mdi-alpha-e-box"></i>
+			  				<i class="c-icon mdi mdi-alpha-n-box"></i>
+			  				<i class="c-icon mdi mdi-alpha-r-box"></i>
+			  				<i class="c-icon mdi mdi-alpha-y-box"></i>
+			  				<i class="c-icon mdi mdi-numeric-9-box"></i>
+			  				<span class="mx-3">|</span>
+			  				<span class="mdi mdi-account"></span>
+			  				<span class="mdi mdi-account mdi-rotate-45"></span>
+			  				<span class="mdi mdi-account mdi-rotate-90"></span>
+			  				<i class="c-icon mdi mdi-angle-acute"></i>
+			  				<i class="c-icon mdi mdi-angle-acute mdi-flip-h"></i>
+			  				<i class="c-icon mdi mdi-angle-acute mdi-flip-v"></i>
+			  				<span class="mdi mdi-loading mdi-spin"></span>
+			  				<span class="mdi mdi-crop-free mdi-spin"></span>
+			  			</div>
+			  			<div class="text-monospace h-fz--xs">
+			  				Rotate:
+			  				.mdi-rotate-45,
+								.mdi-rotate-90,
+								.mdi-rotate-135,
+								.mdi-rotate-180,
+								.mdi-rotate-225,
+								.mdi-rotate-270,
+								.mdi-rotate-315
+							</div>
+		  				<div class="text-monospace h-fz--xs">
+		  					Flip:
+								.mdi-flip-h,
+								.mdi-flip-v
+		  				</div>
+		  				<div class="text-monospace h-fz--xs">
+		  					Spin:
+								.mdi-spin
+		  				</div>
+		  				<div class="mt-2 h-fz--xs">See more: <a href="https://materialdesignicons.com/" target="_blank">materialdesignicons.com</a></div>
+			  		</div>
+				  </div>
+				  <hr>
+				  <div class="l-guide">
+				  	<h1 class="l-guide__title"><span>Buttons</span></h1>
+						<div class="l-guide__content">
+							<div class="row align-items-center mb-3">
+								<div class="col-12 mb-2 col-md-3 mb-md-0 col-lg-2">Normal</div>
+								<div class="col-12 col-md-9 col-lg-10">
+									<button type="button" class="btn c-button c-button--default">Default</button>
+									<button type="button" class="btn c-button c-button--default-outline">Outline</button>
+									<button type="button" class="btn c-button c-button--primary">Primary</button>
+									<button type="button" class="btn c-button c-button--primary-outline">Outline</button>
+									<button type="button" class="btn c-button c-button--secondary">Secondary</button>
+									<button type="button" class="btn c-button c-button--secondary-outline">Outline</button>
+								</div>
+							</div>
+							<div class="row align-items-center mb-3">
+								<div class="col-12 mb-2 col-md-3 mb-md-0 col-lg-2">Disabled</div>
+								<div class="col-12 col-md-9 col-lg-10">
+									<button type="button" disabled class="btn c-button c-button--default">Default</button>
+									<button type="button" disabled class="btn c-button c-button--default-outline">Outline</button>
+									<button type="button" disabled class="btn c-button c-button--primary">Primary</button>
+									<button type="button" disabled class="btn c-button c-button--primary-outline">Outline</button>
+									<button type="button" disabled class="btn c-button c-button--secondary">Secondary</button>
+									<button type="button" disabled class="btn c-button c-button--secondary-outline">Outline</button>
+								</div>
+							</div>
+							<div class="row align-items-center mb-3">
+								<div class="col-12 mb-2 col-md-3 mb-md-0 col-lg-2">Size</div>
+								<div class="col-12 col-md-9 col-lg-10">
+									<button type="button" class="btn btn-sm c-button c-button--default-outline">Small</button>
+									<button type="button" class="btn c-button c-button--default-outline">Default</button>
+									<button type="button" class="btn btn-lg c-button c-button--default-outline">Large</button>
+								</div>
+							</div>
+							<div class="row align-items-center mb-3">
+								<div class="col-12 mb-2 col-md-3 mb-md-0 col-lg-2">With icons</div>
+								<div class="col-12 col-md-9 col-lg-10">
+									<button type="button" class="btn c-button c-button--default"><i class="mdi mdi-home"></i></button>
+									<button type="button" class="btn c-button c-button--primary"><i class="mdi mdi-city mr-2"></i>Icon</button>
+									<button type="button" class="btn c-button c-button--secondary">Icon<i class="mdi mdi-checkerboard ml-2"></i></button>
+								</div>
+							</div>
+							<div class="row align-items-center mb-3">
+								<div class="col-12 mb-2 col-md-3 mb-md-0 col-lg-2">Social connect</div>
+								<div class="col-12 col-md-9 col-lg-10">
+									<div class="row">
+										<div class="col col-sm-6 col-xl-6">
+											<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--facebook"><i class="c-button--social__icon mdi mdi-facebook"></i>Sign in with Facebook</button>
+										</div>
+										<div class="col col-sm-6 col-xl-6">
+											<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--google"><i class="c-button--social__icon mdi mdi-google"></i>Continue with Google</button>
+										</div>
+										<div class="col col-sm-6 col-xl-4">
+											<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--twitter"><i class="c-button--social__icon mdi mdi-twitter"></i>View on Twitter</button>
+										</div>
+										<div class="col col-sm-6 col-xl-4">
+											<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--instagram"><i class="c-button--social__icon mdi mdi-instagram"></i>Connect with Instagram</button>
+										</div>
+										<div class="col col-sm-6 col-xl-4">
+											<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--youtube"><i class="c-button--social__icon mdi mdi-youtube"></i>View Youtube Channel</button>
+										</div>
+										<div class="col col-sm-6 col-xl-4">
+											<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--skype"><i class="c-button--social__icon mdi mdi-skype"></i>Chat on Skype</button>
+										</div>
+										<div class="col col-sm-6 col-xl-4">
+											<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--linkedin"><i class="c-button--social__icon mdi mdi-linkedin"></i>View profile on Linkedin</button>
+										</div>
+										<div class="col col-sm-6 col-xl-4">
+											<button class="btn btn-block mb-2 c-button c-button--social c-button--social--has-icon c-button--social--soundcloud"><i class="c-button--social__icon mdi mdi-soundcloud"></i>Listen on Soundcloud</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				  </div>
+				  <hr>
+				  <div class="l-guide">
+				  	<h1 class="l-guide__title"><span>Dropdowns</span></h1>
+				  	<div class="l-guide__content">
+				  		<div class="dropdown c-dropdown d-inline-block">
+							  <button class="btn c-button c-button--default-outline" type="button" data-toggle="dropdown">Dropdown <i class="mdi mdi-chevron-down"></i></button>
+							  <div class="dropdown-menu c-dropdown-menu h-shadow-3">
+							    <a href="#" class="dropdown-item c-dropdown-menu__item active">Action</a>
+							    <a href="#" class="dropdown-item c-dropdown-menu__item">Another action</a>
+							    <div class="c-dropdown-menu__divider"></div>
+							    <a href="#" class="dropdown-item c-dropdown-menu__item disabled">Something else here</a>
+							  </div>
+							</div>
+							<div class="dropdown c-dropdown d-inline-block">
+							  <button class="btn btn-sm c-button c-button--default-outline" type="button" data-toggle="dropdown">Dropdown SM <i class="mdi mdi-chevron-down"></i></button>
+							  <div class="dropdown-menu dropdown-menu-right c-dropdown-menu c-dropdown-menu--sm h-shadow-3">
+							    <a href="#" class="dropdown-item c-dropdown-menu__item active">Action</a>
+							    <a href="#" class="dropdown-item c-dropdown-menu__item">Another action</a>
+							    <div class="c-dropdown-menu__divider"></div>
+							    <a href="#" class="dropdown-item c-dropdown-menu__item disabled">Something else here</a>
+							  </div>
+							</div>
+							<div class="dropdown c-dropdown d-inline-block">
+							  <button class="btn c-button c-button--default-outline" type="button" data-toggle="dropdown">More Options <i class="mdi mdi-chevron-down"></i></button>
+							  <div class="dropdown-menu c-dropdown-menu h-shadow-3" style="width: 240px">
+							  	<h6 class="dropdown-header c-dropdown-menu__header">Dropdown header</h6>
+							    <form class="px-3 py-2">
+								    <div class="form-group mb-2">
+								      <label for="#" class="c-form__label c-form__label--sm">Email address</label>
+								      <input type="email" class="form-control form-control-sm c-form__control" placeholder="email@example.com">
 								    </div>
-								  </div>
-							    <button type="submit" class="btn btn-sm btn-block c-button c-button--primary">Sign in</button>
-							  </form>
-						    <div class="c-dropdown-menu__divider"></div>
-						    <p class="my-0 h-fz-xs px-3 py-1">Some example text that's free-flowing within the dropdown menu.</p>
-						  </div>
-						</div>
-					</div>
+								    <div class="form-group mb-2">
+								      <label for="#" class="c-form__label c-form__label--sm">Password</label>
+								      <input type="password" class="form-control form-control-sm c-form__control" placeholder="Password">
+								    </div>
+								    <div class="form-group mb-2">
+									    <div class="form-check c-form-check c-form-check--sm">
+									      <input type="checkbox" class="form-check-input c-form-check__input" id="dropdownCheck">
+									      <label class="form-check-label c-form-check__label" for="dropdownCheck">Remember me</label>
+									    </div>
+									  </div>
+								    <button type="submit" class="btn btn-sm btn-block c-button c-button--primary">Sign in</button>
+								  </form>
+							    <div class="c-dropdown-menu__divider"></div>
+							    <p class="my-0 h-fz-xs px-3 py-1">Some example text that's free-flowing within the dropdown menu.</p>
+							  </div>
+							</div>
+				  	</div>
+				  </div>
 					<hr>
-					<h3>Form & Input group</h3>
-					<div class="row">
-						<div class="col-12 col-sm-6">
-							<div class="c-form">
-								<div class="form-group">
-							    <label for="#" class="c-form__label">Label</label>
-							    <input type="text" class="form-control c-form__control" placeholder="Input">
-							    <div class="c-form__help-text">Form input help text</div>
-							  </div>
-							  <div class="form-group">
-							  	<input type="text" class="form-control form-control-sm c-form__control" placeholder="Input size sm">
-							  </div>
-							  <div class="form-group">
-							  	<input type="text" class="form-control form-control-lg c-form__control" placeholder="Input size lg">
-							  </div>
-							  <div class="form-group">
-							    <label for="#" class="c-form__label">Select</label>
-							    <select class="form-control c-form__control">
-							      <option selected>1</option>
-							      <option>2</option>
-							      <option>3</option>
-							      <option>4</option>
-							      <option>5</option>
-							    </select>
-							  </div>
-							  <div class="form-group">
-							    <label for="#" class="c-form__label">Example textarea</label>
-							    <textarea class="form-control c-form__control" rows="3" placeholder="Textarea"></textarea>
-							  </div>
-							  <div class="form-group">
-							    <label for="#" class="c-form__label" for="exampleFormControlFile1">Example file input</label>
-							    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-							  </div>
-							  <div class="form-group">
-							  	<label for="#" class="c-form__label">Readonly</label>
-							  	<input class="form-control c-form__control" type="text" placeholder="Readonly input" readonly>
-							  </div>
-							  <div class="form-group">
-							  	<label for="#" class="c-form__label">Disabled</label>
-							  	<input class="form-control c-form__control" type="text" placeholder="Disabled input" disabled>
-							  </div>
-							  <div class="form-group">
-	      					<input type="text" class="form-control-plaintext" value="Readonly - Plain Text" readonly>
-							  </div>
-							  <div class="form-group">
-							  	<div class="form-check c-form-check my-1">
-									  <input class="form-check-input c-form-check__input" type="checkbox" value="" id="defaultCheck1">
-									  <label class="form-check-label c-form-check__label" for="defaultCheck1">Default checkbox</label>
-									</div>
-									<div class="form-check c-form-check my-1">
-									  <input class="form-check-input c-form-check__input" type="checkbox" value="" id="defaultCheck2" disabled>
-									  <label class="form-check-label c-form-check__label" for="defaultCheck2">Disabled checkbox</label>
-									</div>
-							  </div>
-							  <div class="form-group">
-									<div class="form-check c-form-check my-1">
-									  <input class="form-check-input c-form-check__input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-									  <label class="form-check-label c-form-check__label" for="exampleRadios1">Default radio</label>
-									</div>
-									<div class="form-check c-form-check my-1">
-									  <input class="form-check-input c-form-check__input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-									  <label class="form-check-label c-form-check__label" for="exampleRadios2">Second default radio</label>
-									</div>
-									<div class="form-check c-form-check my-1">
-									  <input class="form-check-input c-form-check__input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
-									  <label class="form-check-label c-form-check__label" for="exampleRadios3">Disabled radio</label>
-									</div>
-							  </div>
-							  <div class="form-group">
-							  	<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
-									  <input class="form-check-input c-form-check__input" type="checkbox" id="inlineCheckbox1" value="option1">
-									  <label class="form-check-label c-form-check__label" for="inlineCheckbox1">1</label>
-									</div>
-									<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
-									  <input class="form-check-input c-form-check__input" type="checkbox" id="inlineCheckbox2" value="option2">
-									  <label class="form-check-label c-form-check__label" for="inlineCheckbox2">2</label>
-									</div>
-									<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
-									  <input class="form-check-input c-form-check__input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-									  <label class="form-check-label c-form-check__label" for="inlineCheckbox3">3 (disabled)</label>
-									</div>
-									<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
-									  <input class="form-check-input c-form-check__input" type="radio" value="" id="inlineCheck1">
-									  <label class="form-check-label c-form-check__label" for="inlineCheck1">1</label>
-									</div>
-									<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
-									  <input class="form-check-input c-form-check__input" type="radio" value="" id="inlineCheck1">
-									  <label class="form-check-label c-form-check__label" for="inlineCheck1">2</label>
-									</div>
-									<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
-									  <input class="form-check-input c-form-check__input" type="radio" value="" id="inlinetCheck2" disabled>
-									  <label class="form-check-label c-form-check__label" for="inlineCheck2">3 (disabled)</label>
-									</div>
-							  </div>
-							</div>
-						</div>
-						<div class="col-12 col-sm-6">
-							<div class="form-group">
-								<label for="#" class="c-form__label">Form Row</label>
-								<div class="form-row">
-									<div class="col">
-										<input type="text" class="form-control c-form__control" placeholder="Input">
-									</div>
-									<div class="col">
-										<input type="text" class="form-control c-form__control" placeholder="Input">
+					<div class="l-guide">
+				  	<h1 class="l-guide__title"><span>Form & Input group</span></h1>
+				  	<div class="l-guide__content">
+				  		<div class="row">
+								<div class="col-12 col-sm-6">
+									<div class="c-form">
+										<div class="form-group">
+									    <label for="#" class="c-form__label">Label</label>
+									    <input type="text" class="form-control c-form__control" placeholder="Input">
+									    <div class="c-form__help-text">Form input help text</div>
+									  </div>
+									  <div class="form-group">
+									  	<input type="text" class="form-control form-control-sm c-form__control" placeholder="Input size sm">
+									  </div>
+									  <div class="form-group">
+									  	<input type="text" class="form-control form-control-lg c-form__control" placeholder="Input size lg">
+									  </div>
+									  <div class="form-group">
+									    <label for="#" class="c-form__label">Select</label>
+									    <select class="form-control c-form__control">
+									      <option selected>1</option>
+									      <option>2</option>
+									      <option>3</option>
+									      <option>4</option>
+									      <option>5</option>
+									    </select>
+									  </div>
+									  <div class="form-group">
+									    <label for="#" class="c-form__label">Example textarea</label>
+									    <textarea class="form-control c-form__control" rows="3" placeholder="Textarea"></textarea>
+									  </div>
+									  <div class="form-group">
+									    <label for="#" class="c-form__label" for="exampleFormControlFile1">Example file input</label>
+									    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+									  </div>
+									  <div class="form-group">
+									  	<label for="#" class="c-form__label">Readonly</label>
+									  	<input class="form-control c-form__control" type="text" placeholder="Readonly input" readonly>
+									  </div>
+									  <div class="form-group">
+									  	<label for="#" class="c-form__label">Disabled</label>
+									  	<input class="form-control c-form__control" type="text" placeholder="Disabled input" disabled>
+									  </div>
+									  <div class="form-group">
+			      					<input type="text" class="form-control-plaintext" value="Readonly - Plain Text" readonly>
+									  </div>
+									  <div class="form-group">
+									  	<div class="form-check c-form-check my-1">
+											  <input class="form-check-input c-form-check__input" type="checkbox" value="" id="defaultCheck1">
+											  <label class="form-check-label c-form-check__label" for="defaultCheck1">Default checkbox</label>
+											</div>
+											<div class="form-check c-form-check my-1">
+											  <input class="form-check-input c-form-check__input" type="checkbox" value="" id="defaultCheck2" disabled>
+											  <label class="form-check-label c-form-check__label" for="defaultCheck2">Disabled checkbox</label>
+											</div>
+									  </div>
+									  <div class="form-group">
+											<div class="form-check c-form-check my-1">
+											  <input class="form-check-input c-form-check__input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+											  <label class="form-check-label c-form-check__label" for="exampleRadios1">Default radio</label>
+											</div>
+											<div class="form-check c-form-check my-1">
+											  <input class="form-check-input c-form-check__input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+											  <label class="form-check-label c-form-check__label" for="exampleRadios2">Second default radio</label>
+											</div>
+											<div class="form-check c-form-check my-1">
+											  <input class="form-check-input c-form-check__input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+											  <label class="form-check-label c-form-check__label" for="exampleRadios3">Disabled radio</label>
+											</div>
+									  </div>
+									  <div class="form-group">
+									  	<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
+											  <input class="form-check-input c-form-check__input" type="checkbox" id="inlineCheckbox1" value="option1">
+											  <label class="form-check-label c-form-check__label" for="inlineCheckbox1">1</label>
+											</div>
+											<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
+											  <input class="form-check-input c-form-check__input" type="checkbox" id="inlineCheckbox2" value="option2">
+											  <label class="form-check-label c-form-check__label" for="inlineCheckbox2">2</label>
+											</div>
+											<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
+											  <input class="form-check-input c-form-check__input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+											  <label class="form-check-label c-form-check__label" for="inlineCheckbox3">3 (disabled)</label>
+											</div>
+											<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
+											  <input class="form-check-input c-form-check__input" type="radio" value="" id="inlineCheck1">
+											  <label class="form-check-label c-form-check__label" for="inlineCheck1">1</label>
+											</div>
+											<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
+											  <input class="form-check-input c-form-check__input" type="radio" value="" id="inlineCheck1">
+											  <label class="form-check-label c-form-check__label" for="inlineCheck1">2</label>
+											</div>
+											<div class="form-check form-check-inline c-form-check c-form-check--inline my-1">
+											  <input class="form-check-input c-form-check__input" type="radio" value="" id="inlinetCheck2" disabled>
+											  <label class="form-check-label c-form-check__label" for="inlineCheck2">3 (disabled)</label>
+											</div>
+									  </div>
 									</div>
 								</div>
-							</div>
-							<div class="form-group">
-								<label for="#" class="c-form__label">Input group</label>
-								<div class="input-group c-input-group">
-								  <div class="input-group-prepend">
-								    <span class="input-group-text c-input-group__text">@prepend</span>
-								  </div>
-								  <input type="text" class="form-control c-form__control" placeholder="Input">
-									<div class="input-group-append">
-								    <span class="input-group-text c-input-group__text">@append</span>
-								    <button class="btn c-button c-button--default-outline">Button</button>
-								  </div>
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="input-group c-input-group">
-								  <div class="input-group-prepend c-input-group__prepend">
-								    <span class="input-group-text c-input-group__text">@</span>
-								  </div>
-								  <input type="text" class="form-control c-form__control" placeholder="Input">
-								  <select name="#" id="#" class="form-control c-form__control">
-								  	<option value="#" selected>Select</option>
-								  	<option value="#">1</option>
-								  	<option value="#">2</option>
-								  	<option value="#">3</option>
-								  	<option value="#">4</option>
-								  	<option value="#">5</option>
-								  </select>
-									<div class="input-group-append c-input-group__append">
-										<div class="dropdown c-dropdown">
-										  <button class="btn c-button c-button--default-outline" type="button" data-toggle="dropdown">Dropdown <i class="mdi mdi-chevron-down"></i></button>
-										  <div class="dropdown-menu dropdown-menu-right c-dropdown-menu c-dropdown-menu--sm h-shadow-3">
-										    <a href="#" class="dropdown-item c-dropdown-menu__item active">Action</a>
-										    <a href="#" class="dropdown-item c-dropdown-menu__item">Another action</a>
-										    <div class="c-dropdown-menu__divider"></div>
-										    <a href="#" class="dropdown-item c-dropdown-menu__item disabled">Something else here</a>
+								<div class="col-12 col-sm-6">
+									<div class="form-group">
+										<label for="#" class="c-form__label">Form Row</label>
+										<div class="form-row">
+											<div class="col">
+												<input type="text" class="form-control c-form__control" placeholder="Input">
+											</div>
+											<div class="col">
+												<input type="text" class="form-control c-form__control" placeholder="Input">
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="#" class="c-form__label">Input group</label>
+										<div class="input-group c-input-group">
+										  <div class="input-group-prepend">
+										    <span class="input-group-text c-input-group__text">@prepend</span>
+										  </div>
+										  <input type="text" class="form-control c-form__control" placeholder="Input">
+											<div class="input-group-append">
+										    <span class="input-group-text c-input-group__text">@append</span>
+										    <button class="btn c-button c-button--default-outline">Button</button>
 										  </div>
 										</div>
-								  </div>
-								  <div class="input-group-append c-input-group__append">
-								  	<button class="btn c-button c-button--default-outline"><i class="mdi mdi-magnify h-fz-xl"></i></button>
-								  </div>
+									</div>
+									<div class="form-group">
+										<div class="input-group c-input-group">
+										  <div class="input-group-prepend c-input-group__prepend">
+										    <span class="input-group-text c-input-group__text">@</span>
+										  </div>
+										  <input type="text" class="form-control c-form__control" placeholder="Input">
+										  <select name="#" id="#" class="form-control c-form__control">
+										  	<option value="#" selected>Select</option>
+										  	<option value="#">1</option>
+										  	<option value="#">2</option>
+										  	<option value="#">3</option>
+										  	<option value="#">4</option>
+										  	<option value="#">5</option>
+										  </select>
+											<div class="input-group-append c-input-group__append">
+												<div class="dropdown c-dropdown">
+												  <button class="btn c-button c-button--default-outline" type="button" data-toggle="dropdown">Dropdown <i class="mdi mdi-chevron-down"></i></button>
+												  <div class="dropdown-menu dropdown-menu-right c-dropdown-menu c-dropdown-menu--sm h-shadow-3">
+												    <a href="#" class="dropdown-item c-dropdown-menu__item active">Action</a>
+												    <a href="#" class="dropdown-item c-dropdown-menu__item">Another action</a>
+												    <div class="c-dropdown-menu__divider"></div>
+												    <a href="#" class="dropdown-item c-dropdown-menu__item disabled">Something else here</a>
+												  </div>
+												</div>
+										  </div>
+										  <div class="input-group-append c-input-group__append">
+										  	<button class="btn c-button c-button--default-outline"><i class="mdi mdi-magnify h-fz-xl"></i></button>
+										  </div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group c-input-group">
+										  <div class="input-group-prepend">
+										    <span class="input-group-text c-input-group__text">@prepend</span>
+										  </div>
+										  <textarea class="form-control c-form__control" rows="3"></textarea>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="#" class="c-form__label">Size</label>
+										<div class="input-group input-group-sm mb-2">
+										  <div class="input-group-prepend">
+										    <span class="input-group-text c-input-group__text" id="inputGroup-sizing-sm">Small</span>
+										  </div>
+										  <input type="text" class="form-control c-form__control">
+										  <div class="input-group-append c-input-group__append">
+										    <span class="input-group-text c-input-group__text">@append</span>
+										    <button class="btn c-button c-button--primary">Button</button>
+										  </div>
+										</div>
+										<div class="input-group mb-2">
+										  <div class="input-group-prepend">
+										    <span class="input-group-text c-input-group__text">Default</span>
+										  </div>
+										  <input type="text" class="form-control c-form__control">
+										  <div class="input-group-append c-input-group__append">
+										    <span class="input-group-text c-input-group__text">@append</span>
+										    <button class="btn c-button c-button--primary">Button</button>
+										  </div>
+										</div>
+										<div class="input-group input-group-lg">
+										  <div class="input-group-prepend c-input-group__prepend">
+										    <span class="input-group-text c-input-group__text">Large</span>
+										  </div>
+										  <input type="text" class="form-control c-form__control">
+										  <div class="input-group-append c-input-group__append">
+										    <span class="input-group-text c-input-group__text">@append</span>
+										    <button class="btn c-button c-button--primary">Button</button>
+										  </div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="#" class="c-form__label">Option</label>
+										<div class="d-flex align-items-center">
+											<div class="c-form-option">
+												<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option01" checked>
+												<label for="Input__OptionDemo--option01" class="c-form-option__label">
+													<div class="c-form-option__image h-bg-cover" style="background-image: url('https://via.placeholder.com/128x72')"></div>
+												</label>
+											</div>
+											<div class="c-form-option">
+												<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option02" disabled>
+												<label for="Input__OptionDemo--option02" class="c-form-option__label">
+													<div class="c-form-option__image h-bg-cover" style="background-image: url('https://via.placeholder.com/128x72')"></div>
+												</label>
+											</div>
+											<div class="c-form-option">
+												<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option03" checked disabled>
+												<label for="Input__OptionDemo--option03" class="c-form-option__label">
+													<div class="c-form-option__image h-bg-cover" style="background-image: url('https://via.placeholder.com/128x72')"></div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="#" class="c-form__label">Option</label>
+										<div class="d-flex align-items-center">
+											<div class="c-form-option">
+												<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option04">
+												<label for="Input__OptionDemo--option04" class="c-form-option__label">
+													<div class="c-form-option__text">Option Text</div>
+												</label>
+											</div>
+											<div class="c-form-option">
+												<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option05" disabled>
+												<label for="Input__OptionDemo--option05" class="c-form-option__label">
+													<div class="c-form-option__text">Option Text</div>
+												</label>
+											</div>
+											<div class="c-form-option">
+												<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option06" checked disabled>
+												<label for="Input__OptionDemo--option06" class="c-form-option__label">
+													<div class="c-form-option__text">Option Text</div>
+												</label>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="form-group">
-								<div class="input-group c-input-group">
-								  <div class="input-group-prepend">
-								    <span class="input-group-text c-input-group__text">@prepend</span>
-								  </div>
-								  <textarea class="form-control c-form__control" rows="3"></textarea>
-								</div>
-							</div>
-							<div class="form-group">
-								<label for="#" class="c-form__label">Size</label>
-								<div class="input-group input-group-sm mb-2">
-								  <div class="input-group-prepend">
-								    <span class="input-group-text c-input-group__text" id="inputGroup-sizing-sm">Small</span>
-								  </div>
-								  <input type="text" class="form-control c-form__control">
-								  <div class="input-group-append c-input-group__append">
-								    <span class="input-group-text c-input-group__text">@append</span>
-								    <button class="btn c-button c-button--primary">Button</button>
-								  </div>
-								</div>
-								<div class="input-group mb-2">
-								  <div class="input-group-prepend">
-								    <span class="input-group-text c-input-group__text">Default</span>
-								  </div>
-								  <input type="text" class="form-control c-form__control">
-								  <div class="input-group-append c-input-group__append">
-								    <span class="input-group-text c-input-group__text">@append</span>
-								    <button class="btn c-button c-button--primary">Button</button>
-								  </div>
-								</div>
-								<div class="input-group input-group-lg">
-								  <div class="input-group-prepend c-input-group__prepend">
-								    <span class="input-group-text c-input-group__text">Large</span>
-								  </div>
-								  <input type="text" class="form-control c-form__control">
-								  <div class="input-group-append c-input-group__append">
-								    <span class="input-group-text c-input-group__text">@append</span>
-								    <button class="btn c-button c-button--primary">Button</button>
-								  </div>
-								</div>
-							</div>
-						</div>
-					</div>
+				  	</div>
+				  </div>
 					<hr>
-					<div class="form-group">
-						<div class="d-flex align-items-center">
-							<div class="c-form-option">
-								<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option01" checked>
-								<label for="Input__OptionDemo--option01" class="c-form-option__label">
-									<div class="c-form-option__image h-bg-cover" style="background-image: url('https://via.placeholder.com/128x72')"></div>
-								</label>
-							</div>
-							<div class="c-form-option">
-								<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option02" disabled>
-								<label for="Input__OptionDemo--option02" class="c-form-option__label">
-									<div class="c-form-option__image h-bg-cover" style="background-image: url('https://via.placeholder.com/128x72')"></div>
-								</label>
-							</div>
-							<div class="c-form-option">
-								<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option03" checked disabled>
-								<label for="Input__OptionDemo--option03" class="c-form-option__label">
-									<div class="c-form-option__image h-bg-cover" style="background-image: url('https://via.placeholder.com/128x72')"></div>
-								</label>
-							</div>
-							<div class="c-form-option">
-								<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option04">
-								<label for="Input__OptionDemo--option04" class="c-form-option__label">
-									<div class="c-form-option__text">Option Text</div>
-								</label>
-							</div>
-							<div class="c-form-option">
-								<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option05" disabled>
-								<label for="Input__OptionDemo--option05" class="c-form-option__label">
-									<div class="c-form-option__text">Option Text</div>
-								</label>
-							</div>
-							<div class="c-form-option">
-								<input type="checkbox" class="c-form-option__input" value="" id="Input__OptionDemo--option06" checked disabled>
-								<label for="Input__OptionDemo--option06" class="c-form-option__label">
-									<div class="c-form-option__text">Option Text</div>
-								</label>
-							</div>
-						</div>
-					</div>
+					<div class="l-guide">
+				  	<h1 class="l-guide__title"><span>Modal</span></h1>
+				  	<div class="l-guide__content">
+				  		<button type="button" class="btn c-button c-button--default-outline" data-toggle="modal" data-target="#exampleModal">Sample modal</button>
+				  	</div>
+				  </div>
 					<hr>
-					<h3>Modal</h3>
-					<div>
-						<button type="button" class="btn c-button c-button--default-outline" data-toggle="modal" data-target="#exampleModal">Sample modal</button>
-					</div>
-					<hr>
-					<h3>Pagination</h3>
-					<nav class="d-flex align-items-center justify-content-around">
-						<ul class="c-pagination">
-							<li class="c-pagination__item disabled"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-double-left"></i></a></li>
-							<li class="c-pagination__item"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-left"></i></a></li>
-							<li class="c-pagination__item"><a href="#" class="c-pagination__link">1</a></li>
-							<li class="c-pagination__item active"><a href="#" class="c-pagination__link">2</a></li>
-							<li class="c-pagination__item"><a href="#" class="c-pagination__link">3</a></li>
-							<li class="c-pagination__item"><span class="c-pagination__ellipsis">...</span></li>
-							<li class="c-pagination__item"><a href="#" class="c-pagination__link">99</a></li>
-							<li class="c-pagination__item"><a href="#" class="c-pagination__link">100</a></li>
-							<li class="c-pagination__item"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-right"></i></a></li>
-							<li class="c-pagination__item"><a href="#" class="c-pagination__link c-pagination__link--next-page">Trang kế<i class="mdi mdi-chevron-right ml-1"></i></a></li>
-						</ul>
-						<ul class="c-pagination c-pagination--sm">
-							<li class="c-pagination__item disabled"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-double-left"></i></a></li>
-							<li class="c-pagination__item"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-left"></i></a></li>
-							<li class="c-pagination__item"><a href="#" class="c-pagination__link">1</a></li>
-							<li class="c-pagination__item active"><a href="#" class="c-pagination__link">2</a></li>
-							<li class="c-pagination__item"><a href="#" class="c-pagination__link">3</a></li>
-							<li class="c-pagination__item"><span class="c-pagination__ellipsis">...</span></li>
-							<li class="c-pagination__item"><a href="#" class="c-pagination__link">99</a></li>
-							<li class="c-pagination__item"><a href="#" class="c-pagination__link">100</a></li>
-							<li class="c-pagination__item"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-right"></i></a></li>
-							<li class="c-pagination__item"><a href="#" class="c-pagination__link c-pagination__link--next-page">Trang kế<i class="mdi mdi-chevron-right ml-1"></i></a></li>
-						</ul>
-					</nav>
+					<div class="l-guide">
+				  	<h1 class="l-guide__title"><span>Pagination</span></h1>
+				  	<div class="l-guide__content">
+				  		<nav>
+								<ul class="c-pagination">
+									<li class="c-pagination__item disabled"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-double-left"></i></a></li>
+									<li class="c-pagination__item"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-left"></i></a></li>
+									<li class="c-pagination__item"><a href="#" class="c-pagination__link">1</a></li>
+									<li class="c-pagination__item active"><a href="#" class="c-pagination__link">2</a></li>
+									<li class="c-pagination__item"><a href="#" class="c-pagination__link">3</a></li>
+									<li class="c-pagination__item"><span class="c-pagination__ellipsis">...</span></li>
+									<li class="c-pagination__item"><a href="#" class="c-pagination__link">99</a></li>
+									<li class="c-pagination__item"><a href="#" class="c-pagination__link">100</a></li>
+									<li class="c-pagination__item"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-right"></i></a></li>
+									<li class="c-pagination__item"><a href="#" class="c-pagination__link c-pagination__link--next-page">Trang kế<i class="mdi mdi-chevron-right ml-1"></i></a></li>
+								</ul>
+							</nav>
+							<nav class="mt-2">
+								<ul class="c-pagination c-pagination--sm">
+									<li class="c-pagination__item disabled"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-double-left"></i></a></li>
+									<li class="c-pagination__item"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-left"></i></a></li>
+									<li class="c-pagination__item"><a href="#" class="c-pagination__link">1</a></li>
+									<li class="c-pagination__item active"><a href="#" class="c-pagination__link">2</a></li>
+									<li class="c-pagination__item"><a href="#" class="c-pagination__link">3</a></li>
+									<li class="c-pagination__item"><span class="c-pagination__ellipsis">...</span></li>
+									<li class="c-pagination__item"><a href="#" class="c-pagination__link">99</a></li>
+									<li class="c-pagination__item"><a href="#" class="c-pagination__link">100</a></li>
+									<li class="c-pagination__item"><a href="#" class="c-pagination__link"><i class="mdi mdi-chevron-right"></i></a></li>
+									<li class="c-pagination__item"><a href="#" class="c-pagination__link c-pagination__link--next-page">Trang kế<i class="mdi mdi-chevron-right ml-1"></i></a></li>
+								</ul>
+							</nav>
+				  	</div>
+				  </div>				
 				</div>
 				<div class="c-card h-shadow-1 my-3 p-3">
 					<h3>Select2</h3>

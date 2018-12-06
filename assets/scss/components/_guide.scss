@@ -1,0 +1,34 @@
+/* ============================================================================
+   COMPONENTS -> guide
+   ========================================================================= */
+
+
+.c-guide{	
+	$self: &;
+	&--color{
+		margin: 0 0 1rem;
+		#{$self}__display{
+			width: 96px;
+			height: 96px;
+		}
+		#{$self}__content{
+			margin: .75rem 0 0;
+			padding: 0 1rem;
+			text-align: center;
+		}
+		#{$self}__title{
+			margin: 0 0 .25rem;
+			font-size: $g-fz--sm;
+		}
+		#{$self}__subtitle{
+			margin: 0;
+			font-size: $g-fz--xs;
+			color: $g-c-text--sub;
+		}
+		#{$self}__code--color-primary{
+			&:after{
+				content: "#{$g-c-primary}";
+			}
+		}
+	}
+}

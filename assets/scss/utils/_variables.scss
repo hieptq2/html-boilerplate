@@ -39,18 +39,18 @@ $g-gap: 16px;
 
 $g-colors: (
 	'primary': (
-		'base': 		#2196F3,
-		'darker': 	#1976D2,
-		'lighter': 	#64B5F6
+		'base': 		material-color('indigo', '500'),
+		'darker': 	material-color('indigo', '700'),
+		'lighter': 	material-color('indigo', '300')
 	),
 	'secondary': (
-		'base': 		#009688,
-		'darker': 	#00796B,
-		'lighter': 	#4DB6AC
+		'base': 		material-color('cyan', '500'),
+		'darker': 	material-color('cyan', '700'),
+		'lighter': 	material-color('cyan', '300')
 	),
 	'text': (
 		'base': 		material-color('grey', '900'),
-		'sub': 			material-color('grey', '600'),
+		'sub': 			material-color('grey', '500'),
 		'disabled': material-color('grey', '400')
 	),
 	'background': (
@@ -75,6 +75,9 @@ $g-colors: (
 		'border': 								material-color('grey', '300'),
 		'border--on-hover': 			material-color('grey', '300'),
 		'border--on-focus':				material-color('grey', '400')
+	),
+	'table': (
+		'border': 								material-color('grey', '300'),
 	),
 	'social': (
 		'facebook': 		#3b5999,
@@ -141,7 +144,7 @@ $g-c-divider--light:		set-color('divider', 'light');
  * Fonts
  */
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,500,700&subset=vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400,500,700&subset=vietnamese');
 
 $font-serif: 				'Merriweather', serif;
 $font-sans-serif: 	'Noto Sans SC', sans-serif;;
@@ -205,7 +208,7 @@ $g-fz--xs: 			set-font('size', 'xs');
 $g-fz--xxs: 		set-font('size', 'xxs');
 $g-fz--xxxs: 		set-font('size', 'xxxs');
 
-$g-fw--lighter: 	set-font('weight', 'light');
+$g-fw--light: 		set-font('weight', 'light');
 $g-fw: 						set-font('weight');
 $g-fw--dark: 			set-font('weight', 'medium');
 $g-fw--darker: 		set-font('weight', 'bold');
@@ -224,10 +227,10 @@ $g-heading: (
 
 // link
 $g-link: (
-	'color' 						: $g-c-primary,
-	'color-hover' 			: $g-c-primary,
-	'decoration' 				: none,
-	'decoration-hover' 	: none,
+	'color' 								: $g-c-primary,
+	'color--on-hover' 			: $g-c-primary,
+	'decoration' 						: none,
+	'decoration--on-hover' 	: none,
 );
 
 // border

@@ -4,5 +4,27 @@
 
 
 .l-header{
-	//
+	$self: &;
+	&--guide{
+		#{$self}__logo{
+			padding-right: 1rem;
+			margin-right: 0.5rem;
+			border-right: $g-border;
+			img{
+				display: block;
+				height: 48px;
+				width: auto;
+			}
+		}
+		#{$self}__title{
+			font-size: $g-fz--xxl;
+			font-weight: $g-fw--light;
+			color: material-color('grey', '500');
+		}
+		#{$self}__credit{
+			font-size: $g-fz--xs;
+			font-weight: $g-fw--light;
+			color: material-color('grey', '500');
+		}
+	}
 }

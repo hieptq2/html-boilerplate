@@ -40,8 +40,8 @@ a{
 		// color: map-get($g-link, 'color');
 	}
 	&:hover{
-		color: map-get($g-link, 'color-hover');
-		text-decoration: map-get($g-link, 'decoration-hover');
+		color: map-get($g-link, 'color--on-hover');
+		text-decoration: map-get($g-link, 'decoration--on-hover');
 	}
 }
 
@@ -57,4 +57,11 @@ b{
 
 hr{
 	border-color: $g-c-divider;
+}
+
+mark, 
+.mark{
+	padding-left: .25rem;
+	padding-right: .25rem;
+	background-color: lighten($g-c-primary, 42%);
 }

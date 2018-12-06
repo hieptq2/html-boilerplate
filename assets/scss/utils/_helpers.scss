@@ -34,6 +34,12 @@
 .h-c-secondary{
 	color: $g-c-secondary !important;
 }
+.h-bgc-primary{
+	background-color: $g-c-primary !important;
+}
+.h-bgc-secondary{
+	background-color: $g-c-secondary !important;
+}
 
 .h-c-text{
 	color: $g-c-text !important;
@@ -132,10 +138,23 @@
 }
 
 @each $label, $size in map-get($g-fonts, 'size'){
-	.h-fz-#{$label}{
+	.h-fz--#{$label}{
 		font-size: $size !important;
 	}
 }
+.h-fw--light{
+	font-weight: $g-fw--light;
+}
+.h-fw{
+	font-weight: $g-fw;
+}
+.h-fw--dark{
+	font-weight: $g-fw--dark;
+}
+.h-fw--darker{
+	font-weight: $g-fw--darker;
+}
+
 
 
 // form
@@ -155,6 +174,13 @@
 	&:visited{
 		outline: none;
 	}
+}
+
+.h-bdrd{
+	border-radius: 2px;
+}
+.h-bdrd-circle{
+	border-radius: 50%;
 }
 
 
