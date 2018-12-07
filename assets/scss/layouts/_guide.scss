@@ -4,6 +4,22 @@
 
 $c--guider-title: material-color('grey', '500');
 
+.l-guide-section{
+	&__header{
+		padding: 0 0 2rem;
+		margin: 0 0 2rem;
+		border-bottom: $g-border;
+	}
+	&__title{
+		margin: 0;
+		font-size: 4rem;
+		font-weight: $g-fw--light;
+		letter-spacing: 4px;
+		text-align: right;
+	}
+}
+
+
 .l-guide{
 	$self: &;
 	&__title{

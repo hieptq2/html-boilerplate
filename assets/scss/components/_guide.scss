@@ -5,6 +5,60 @@
 
 .c-guide{	
 	$self: &;
+	&--side-nav{
+		@include viewport-min(md){
+			padding-right: 2rem;
+			border-right: $g-border;
+		}
+		ul, ol{
+			@extend %list-reset;
+		}
+		a{
+			display: block;
+			vertical-align: top;
+			&:hover{
+				color: $g-c-primary;
+			}
+		}
+
+		// main menu
+		ol{
+			padding: 0 0 0 2rem;
+			list-style: decimal-leading-zero;
+			& > li{
+				& + li{
+					margin-top: 1rem;
+				}
+				& > a{
+					color: $g-c-text;
+				}
+			}
+
+			// sub menu
+			ul{
+				margin-top: .25rem;
+				position: relative;
+				&:after{
+					content: "";
+					display: block;
+					width: 1px;
+					position: absolute;
+					top: 0; bottom: 0;
+					left: -1rem;
+					background-color: $g-c-divider;
+				}
+				& > li{
+					& > a{
+						padding: .125rem 0;
+						font-size: $g-fz--xs;
+						color: $g-c-text--sub;
+					}
+				}
+			}
+		}
+	}
+
+
 	&--color{
 		margin: 0 0 1rem;
 		#{$self}__display{
