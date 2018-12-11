@@ -5,10 +5,10 @@
 // base
 
 body{
-	line-height: $g-lh;
-	font-family: $g-ff;
-	font-size: $g-fz;
-	font-weight: $g-fw;
+	line-height: $g-line-height;
+	font-family: set-font('family');
+	font-size: set-font('size');
+	font-weight: set-font('weight');
 }
 
 
@@ -16,10 +16,10 @@ body{
 
 @for $i from 1 through 6 {
 	h#{$i}, .h#{$i}{
-		font-size: 			nth(map-get($g-heading, 'fz'), $i);
-		font-weight: 		map-get($g-heading, 'fw');
-		line-height: 		nth(map-get($g-heading, 'lh'), $i);
-		margin-bottom: 	nth(map-get($g-heading, 'mb'), $i);
+		font-size: 			nth(map-get($g-heading, 'font-size'), $i);
+		font-weight: 		map-get($g-heading, 'font-weight');
+		line-height: 		nth(map-get($g-heading, 'line-height'), $i);
+		margin-bottom: 	nth(map-get($g-heading, 'margin-bottom'), $i);
 	}
 }
 
@@ -49,19 +49,19 @@ a{
 // bold
 
 b{
-	font-weight: $g-fw--dark;
+	font-weight: set-font('weight', 'medium');
 }
 
 
 // hr
 
 hr{
-	border-color: $g-c-divider;
+	border-color: set-color('divider');
 }
 
 mark, 
 .mark{
 	padding-left: .25rem;
 	padding-right: .25rem;
-	background-color: lighten($g-c-primary, 42%);
+	background-color: lighten(set-color('primary'), 40%);
 }

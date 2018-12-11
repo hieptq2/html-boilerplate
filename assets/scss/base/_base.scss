@@ -4,8 +4,8 @@
 
 
 body{
-	color: $g-c-text;
-	background-color: $g-c-background;
+	color: set-color('text');
+	background-color: set-color('background');
 }
 
 [disabled]{

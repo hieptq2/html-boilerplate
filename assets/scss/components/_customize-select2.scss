@@ -271,7 +271,7 @@
   border-radius: 2px;
   line-height: 24px;
   height: 26px;
-  font-size: $g-fz--sm;
+  font-size: set-font('size', 'sm');
   // cursor: default;
   // float: left;
   margin-right: 5px;
@@ -360,7 +360,7 @@
 
 .select2-container--default .select2-results__option[aria-selected=true] {
 	color: #fff;
-  background-color: $g-c-primary--lighter;
+  background-color: set-color('primary', 'lighter');
 }
 
 .select2-container--default .select2-results__option .select2-results__option {
@@ -405,7 +405,7 @@
   cursor: default;
   display: block;
   padding: 8px 8px 4px;
-  font-size: $g-fz--xs;
+  font-size: set-font('size', 'xs');
   text-transform: uppercase;
   color: material-color('grey', '500');
 }

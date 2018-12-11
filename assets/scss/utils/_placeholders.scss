@@ -33,7 +33,6 @@
 
 
 // layout
-
 %center {
 	display: block;
   position: absolute;
@@ -56,7 +55,6 @@
 
 
 // pseudo elements
-
 %before-after {
   position: relative;
   &:before,
@@ -82,7 +80,6 @@
 
 
 // background
-
 %bg-cover{
   @include background-size(cover);
   background: {
@@ -98,26 +95,20 @@
   };
 }
 
-
 // size
-
 %fullsize{
   width: 100%;
   height: 100%;
 }
 
-
 // image
-
 %img-cover{
   display: block;
   object-fit: cover;
 }
 
-
 // link
-
-%link-no-udl{
+%no-underline{
   &,
   &:hover,
   &:active,
@@ -126,10 +117,17 @@
     text-decoration: none;
   }
 }
+%no-outline{
+  &,
+  &:hover,
+  &:active,
+  &:focus, 
+  &:visited{
+    outline: none;
+  }
+}
 
-
-// icon
-
+// mdi-icon
 %mdi-icon{
   display: inline-block;
   font: normal normal normal 24px/1 "Material Design Icons";

@@ -8,79 +8,124 @@
  */
 
 
-// Colors
 
-$c--white:    #fff;
-$c--black:    #000;
+// ============================================================================
 
-$c--grey-50 :	#fafafa;
-$c--grey-100:	#f5f5f5;
-$c--grey-200:	#eeeeee;
-$c--grey-300:	#e0e0e0;
-$c--grey-400:	#bdbdbd;
-$c--grey-500:	#9e9e9e;
-$c--grey-600:	#757575;
-$c--grey-700:	#616161;
-$c--grey-800:	#424242;
-$c--grey-900:	#212121;
+/**
+ * Colors
+ */
 
-$g--c-primary: 						material-color('indigo', '500');
-$g--c-primary--darker:		material-color('indigo', '700');
-$g--c-secondary:					material-color('teal', '500');
-$g--c-secondary--darker:	material-color('teal', '700');
+$white: #fff;
+$black: #000;
 
+// Bootstrap
 
+$blue:    #007bff;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #28a745;
+$teal:    #20c997;
+$cyan:    #17a2b8;
 
-// $g--c--background: ;
-// $g--c--background--light: ;
-// $g--c--background--dark: ;
-// $g--c--border: ;
-// $g--c--border--dark: ;
-// $g--c--icons: ;
-
- 
-// $g--c--input--color: ;
-// $g--c--input--border: ;
-// $g--c--input--placeholder: ;
-// $g--c--input--label: ;
+$success:    $green;
+$info:       $cyan;
+$warning:    $yellow;
+$danger:     $red;
 
 
-// Spacing
-// Body
-// Links
-// Grid breakpoints
-// Grid containers
-// Grid columns
+// Material Colors
 
-// Components
-
-// $g--border-color
-// $g--border-radius: 2px;
-
-// $g--$box-shadow-1
-// $g--$box-shadow-2
-// $g--$box-shadow-3
-// $g--$box-shadow-4
+$grey50:	material-color('grey', '50');
+$grey100:	material-color('grey', '100');
+$grey200:	material-color('grey', '200');
+$grey300:	material-color('grey', '300');
+$grey400:	material-color('grey', '400');
+$grey500:	material-color('grey', '500');
+$grey600:	material-color('grey', '600');
+$grey700:	material-color('grey', '700');
+$grey800:	material-color('grey', '800');
+$grey900:	material-color('grey', '900');
 
 
-// Fonts
+/**
+ * Global color map
+ */
 
-// $ff--name
-// $ff--name
-// $ff--name
+$g-colors: (
+	'primary': (
+		'base': 		material-color('indigo', '500'),
+		'darker': 	material-color('indigo', '700'),
+		'lighter': 	material-color('indigo', '400')
+	),
+	'secondary': (
+		'base': 		material-color('cyan', '500'),
+		'darker': 	material-color('cyan', '700'),
+		'lighter': 	material-color('cyan', '400')
+	),
+	'text': (
+		'base': 		$grey900,
+		'sub': 			$grey600,
+		'disabled': $grey400
+	),
+	'background': (
+		'base': 		$grey100,
+		'darker': 	$grey200,
+		'dark': 		$grey300,
+		'lighter': 	$grey50
+	),
+	'divider': (
+		'base': 		rgba(#000, .08),
+		'dark':			rgba(#000, .12),
+		'darker':		rgba(#000, .12),
+		'light': 		rgba(#fff, .08),
+		'lighter': 	rgba(#fff, .12),
+	),
+	'form': (
+		'label': 									$grey700,
+		'text': 									$grey800,
+		'background':							#fff,
+		'text--readonly':					$grey800,
+		'background--readonly':		$grey100,
+		'text--disabled':					$grey500,
+		'background--disabled':		$grey200,
+		'placeholder': 						$grey400,
+		'border': 								$grey300,
+		'border--on-hover': 			$grey300,
+		'border--on-focus':				$grey400
+	),
+	'table': (
+		'border': 								$grey300,
+	),
+	'social': (
+		'facebook': 		#3b5999,
+		'google': 			#dd4b39,
+		'youtube':			#cd201f,
+		'twitter': 			#55acee,
+		'instagram': 		#e4405f,
+		'skype':				#00AFF0,
+		'linkedin':			#007bb6,
+		'soundcloud': 	#ff3300
+	)
+);
 
-// $g--ff-base: $ff--name;
 
-// $g--fz--base: ;
-// $g--fz--xl: ;
-// $g--fz--lg: ;
-// $g--fz--sm: ;
-// $g--fz--xs: ;
+/**
+ * Retrieve color values
+ */
 
-// $g--fw--base
-// $g--fw--light
-// $g--fw--dark
-// $g--fw--bold
+@function set-color($color, $tone: 'base') {
+  $color: map-get(map-get($g-colors, $color), $tone);
+  @if $color{
+    @return $color;
+  }@else{
+    @warn "=> ERROR: COLOR NOT FOUND!";
+  }
+}
+
 
 
 // ============================================================================
@@ -103,113 +148,8 @@ $g-container: (
   'lg': 960px,
   'xl': 1140px
 );
+
 $g-gap: 16px;
-
-
-// ============================================================================
-
-/**
- * Colors
- */
-
-$g-colors: (
-	'primary': (
-		'base': 		material-color('indigo', '500'),
-		'darker': 	material-color('indigo', '700'),
-		'lighter': 	material-color('indigo', '300')
-	),
-	'secondary': (
-		'base': 		material-color('cyan', '500'),
-		'darker': 	material-color('cyan', '700'),
-		'lighter': 	material-color('cyan', '300')
-	),
-	'text': (
-		'base': 		material-color('grey', '900'),
-		'sub': 			material-color('grey', '500'),
-		'disabled': material-color('grey', '400')
-	),
-	'background': (
-		'base': 		#f5f5f5,
-		'lighter': 	#fafafa,
-		'darker': 	#eee
-	),
-	'divider': (
-		'base': 	rgba(#000, .08),
-		'light': 	rgba(#fff, .08),
-		'dark': 	rgba(#000, .08)
-	),
-	'form': (
-		'label': 									material-color('grey', '700'),
-		'text': 									material-color('grey', '900'),
-		'background':							#fff,
-		'text--readonly':					material-color('grey', '700'),
-		'background--readonly':		material-color('grey', '100'),
-		'text--disabled':					material-color('grey', '500'),
-		'background--disabled':		material-color('grey', '200'),
-		'placeholder': 						material-color('grey', '400'),
-		'border': 								material-color('grey', '300'),
-		'border--on-hover': 			material-color('grey', '300'),
-		'border--on-focus':				material-color('grey', '400')
-	),
-	'table': (
-		'border': 								material-color('grey', '300'),
-	),
-	'social': (
-		'facebook': 		#3b5999,
-		'google': 			#dd4b39,
-		'youtube':			#cd201f,
-		'twitter': 			#55acee,
-		'instagram': 		#e4405f,
-		'skype':				#00AFF0,
-		'linkedin':			#007bb6,
-		'soundcloud': 	#ff3300
-	),
-	'solid': (
-		'black': 		#000,
-		'white': 		#fff,
-		'red': 			material-color('red','500'),
-		'blue': 		material-color('blue','500'),
-		'green': 		material-color('green','500'),
-		'orange': 	material-color('orange','500'),
-	),
-);
-
-/**
- * Retrieves a color value from the $g-color and $color map
- */
-
-@function set-color($color, $tone: 'base') {
-  $color: map-get(map-get($g-colors, $color), $tone);
-  @if $color {
-    @return $color;
-  }@else{
-    @warn "=> ERROR: COLOR NOT FOUND!";
-  }
-}
-
-/**
- * Color variables from $g-colors map
- */
-
-$g-c-primary: 						set-color('primary');
-$g-c-primary--darker: 		set-color('primary', 'darker');
-$g-c-primary--lighter: 		set-color('primary', 'lighter');
-
-$g-c-secondary: 					set-color('secondary');
-$g-c-secondary--darker: 	set-color('secondary', 'darker');
-$g-c-secondary--lighter: 	set-color('secondary', 'lighter');
-
-$g-c-text: 						set-color('text');
-$g-c-text--sub: 			set-color('text', 'sub');
-$g-c-text--disabled: 	set-color('text', 'disabled');
-
-$g-c-background:						set-color('background');
-$g-c-background--darker:		set-color('background', 'darker');
-$g-c-background--lighter:		set-color('background', 'lighter');
-
-$g-c-divider:						set-color('divider');
-$g-c-divider--dark:			set-color('divider', 'dark');
-$g-c-divider--light:		set-color('divider', 'light');
 
 
 
@@ -221,27 +161,25 @@ $g-c-divider--light:		set-color('divider', 'light');
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,400,500,700&subset=vietnamese');
 
-$font-serif: 				'Merriweather', serif;
-$font-sans-serif: 	'Noto Sans SC', sans-serif;;
+$ff-merriweather: 	'Merriweather', serif;
+$ff-noto-sans: 			'Noto Sans SC', sans-serif;;
 
-$font-main: 				$font-sans-serif;
+$ff-main: 					$ff-noto-sans;
 
 $g-fonts: (
 	'family': (
-		'base': 				$font-main,
-		'serif': 				$font-serif,
-		'sans-serif': 	$font-sans-serif
+		'base': 			$ff-main
 	),
 	'size': (
-		'xxxl': 	1.4rem,				// 24px
-		'xxl': 		1.375rem, 		// 22px
-		'xl': 		1.25rem, 			// 20px
-		'lg': 		1.125rem,			// 18px
-		'base': 	1rem, 				// 16px
-		'sm': 		.875rem,			// 14px
-		'xs': 		.75rem,				// 12px
-		'xxs': 		.6875rem,			// 11px
-		'xxxs': 	.625rem				// 10px
+		'xxxl': 			1.4rem,				// 24px
+		'xxl': 				1.375rem, 		// 22px
+		'xl': 				1.25rem, 			// 20px
+		'lg': 				1.125rem,			// 18px
+		'base': 			1rem, 				// 16px
+		'sm': 				.875rem,			// 14px
+		'xs': 				.75rem,				// 12px
+		'xxs': 				.6875rem,			// 11px
+		'xxxs': 			.625rem				// 10px
 	),
 	'weight': (
 		'light': 			300,
@@ -265,51 +203,34 @@ $g-fonts: (
   }
 }
 
-/**
- * Font variables from $g-fonts map
+/** 
+ * Line height
  */
 
-$g-ff:  						set-font('family');
-$g-ff--serif:  			set-font('family', 'serif');
-$g-ff--sans-serif:  set-font('family', 'sans-serif');
+$g-line-height: 1.5;
 
-$g-fz--xxxl: 		set-font('size', 'xxxl');
-$g-fz--xxl: 		set-font('size', 'xxl');
-$g-fz--xl: 			set-font('size', 'xl');
-$g-fz--lg: 			set-font('size', 'lg');
-$g-fz: 					set-font('size');
-$g-fz--sm: 			set-font('size', 'sm');
-$g-fz--xs: 			set-font('size', 'xs');
-$g-fz--xxs: 		set-font('size', 'xxs');
-$g-fz--xxxs: 		set-font('size', 'xxxs');
+/** 
+ * Heading
+ */
 
-$g-fw--light: 		set-font('weight', 'light');
-$g-fw: 						set-font('weight');
-$g-fw--dark: 			set-font('weight', 'medium');
-$g-fw--darker: 		set-font('weight', 'bold');
-
-
-// line-height
-$g-lh: 1.5;
-
-// heading
 $g-heading: (
-	'fz': (2rem, 1.75rem, 1.5rem, 1.25rem, 1.125rem, 1rem),
-	'fw': $g-fw--dark,
-	'lh': (1.25, 1.25, 1.375, 1.375, 1.5, 1.5),
-	'mb': (1.5rem, 1.5rem, 1.25rem, 1.25rem, 1rem, 1rem)
+	'font-size': 			(2rem, 1.75rem, 1.5rem, 1.25rem, 1.125rem, 1rem),
+	'font-weight': 		set-font('weight', 'medium'),
+	'line-height': 		(1.25, 1.25, 1.375, 1.375, 1.5, 1.5),
+	'margin-bottom': 	(1.5rem, 1.5rem, 1.25rem, 1.25rem, 1rem, 1rem)
 );
 
-// link
+/** 
+ * Link
+ */
+
 $g-link: (
-	'color' 								: $g-c-primary,
-	'color--on-hover' 			: $g-c-primary,
-	'decoration' 						: none,
-	'decoration--on-hover' 	: none,
+	'color': 									set-color('primary'),
+	'color--on-hover':				set-color('primary'),
+	'decoration': 						none,
+	'decoration--on-hover': 	none,
 );
 
-// border
-$g-border: 1px solid $g-c-divider;
 
 
 // ============================================================================
@@ -329,10 +250,11 @@ $g-easing: (
 );
 
 
+
 // ============================================================================
 
 /**
- * Z-index
+ * z-index
  */
 
 $g-z-index: (
@@ -351,3 +273,6 @@ $g-z-index: (
 
 
 // ============================================================================
+
+
+$g-bdrd: 2px;

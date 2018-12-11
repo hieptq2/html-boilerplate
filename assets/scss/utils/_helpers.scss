@@ -28,41 +28,42 @@
 
 
 // colors
+
 .h-c-primary{
-	color: $g-c-primary !important;
+	color: set-color('primary') !important;
 }
 .h-c-secondary{
-	color: $g-c-secondary !important;
+	color: set-color('secondary') !important;
 }
 .h-bgc-primary{
-	background-color: $g-c-primary !important;
+	background-color: set-color('primary') !important;
 }
 .h-bgc-secondary{
-	background-color: $g-c-secondary !important;
+	background-color: set-color('secondary') !important;
 }
 
 .h-c-text{
-	color: $g-c-text !important;
+	color: set-color('text') !important;
 }
 .h-c-text--sub{
-	color: $g-c-text--sub !important;
+	color: set-color('text', 'sub') !important;
 }
 .h-c-text--disabled{
-	color: $g-c-text--disabled !important;
+	color: set-color('text', 'disabled') !important;
 }
 
-@each $color, $hex in map-get($g-colors, 'solid'){
-	.h-c-#{$color}{
-		color: $hex !important;
-	}
-	.h-bgc-#{$color}{
-		background-color: $hex !important;
-	}
-	.h-bdc-#{$color}{
-		border-color: $hex !important;
-	}
+.h-bgc{
+	background-color: set-color('background');
 }
-
+.h-bgc--lighter{
+	background-color: set-color('background', 'lighter');
+}
+.h-bgc--darker{
+	background-color: set-color('background', 'darker');
+}
+.h-bgc--dark{
+	background-color: set-color('background', 'dark');
+}
 
 // shadow
 
@@ -142,17 +143,10 @@
 		font-size: $size !important;
 	}
 }
-.h-fw--light{
-	font-weight: $g-fw--light;
-}
-.h-fw{
-	font-weight: $g-fw;
-}
-.h-fw--dark{
-	font-weight: $g-fw--dark;
-}
-.h-fw--darker{
-	font-weight: $g-fw--darker;
+@for $i from 3 through 8{
+	.h-fw--#{$i * 100}{
+		font-weight: $i * 100 !important;
+	}
 }
 
 
@@ -176,10 +170,10 @@
 	}
 }
 
-.h-bdrd{
-	border-radius: 2px;
+.h-bdrd--base{
+	border-radius: $g-bdrd;
 }
-.h-bdrd-circle{
+.h-bdrd--circle{
 	border-radius: 50%;
 }
 

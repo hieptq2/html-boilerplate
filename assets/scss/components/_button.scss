@@ -26,28 +26,28 @@
 	}
 	// colors
 	&--default{
-		@include button-color($g-c-text, $g-c-background--darker, transparent,
-													$g-c-text, darken($g-c-background--darker, 5%), transparent);
+		@include button-color(set-color('text'), set-color('background', 'darker'), transparent,
+													set-color('text'), set-color('background', 'darker'), transparent);
 	}
 	&--default-outline{
-		@include button-color($g-c-text, #fff, set-color('form', 'border'),
-													$g-c-text, $g-c-background--lighter);
+		@include button-color(set-color('text'), #fff, set-color('form', 'border'),
+													set-color('text'), #fff , set-color('form', 'border'));
 	}
 	&--primary{
-		@include button-color(#fff, $g-c-primary, transparent,
-													#fff, $g-c-primary--darker);
+		@include button-color(#fff, set-color('primary'), transparent,
+													#fff, set-color('primary', 'darker'), transparent);
 	}
 	&--primary-outline{
-		@include button-color($g-c-primary--darker, #fff, $g-c-primary,
-													$g-c-primary--darker, $g-c-background--lighter, $g-c-primary--darker);
+		@include button-color(set-color('primary', 'darker'), #fff, set-color('primary'),
+													set-color('primary', 'darker'), #fff, set-color('primary', 'darker'));
 	}
 	&--secondary{
-		@include button-color(#fff, $g-c-secondary, transparent,
-													#fff, $g-c-secondary--darker);
+		@include button-color(#fff, set-color('secondary'), transparent,
+													#fff, set-color('secondary', 'darker'), transparent);
 	}
 	&--secondary-outline{
-		@include button-color($g-c-secondary--darker, #fff, $g-c-secondary,
-													$g-c-secondary--darker, $g-c-background--lighter, $g-c-secondary--darker);
+		@include button-color(set-color('secondary', 'darker'), #fff, set-color('secondary'),
+													set-color('secondary', 'darker'), #fff, set-color('secondary', 'darker'));
 	}
 	
 
@@ -65,7 +65,7 @@
 				line-height: 28px;
 				font-size: 1.25rem;
 				text-align: center;
-				border-right: 1px solid $g-c-divider--light;
+				border-right: 1px solid set-color('divider', 'light');
 			}
 		}
 	}
