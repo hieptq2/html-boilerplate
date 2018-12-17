@@ -39,7 +39,7 @@
 	}
 	&--primary-outline{
 		@include button-color(set-color('primary', 'darker'), #fff, set-color('primary'),
-													set-color('primary', 'darker'), #fff, set-color('primary', 'darker'));
+													set-color('primary', 'darker'), set-color('background', 'darker'), set-color('primary', 'darker'));
 	}
 	&--secondary{
 		@include button-color(#fff, set-color('secondary'), transparent,
@@ -47,7 +47,7 @@
 	}
 	&--secondary-outline{
 		@include button-color(set-color('secondary', 'darker'), #fff, set-color('secondary'),
-													set-color('secondary', 'darker'), #fff, set-color('secondary', 'darker'));
+													set-color('secondary', 'darker'), set-color('background', 'darker'), set-color('secondary', 'darker'));
 	}
 	
 

@@ -4,7 +4,7 @@ define([], function(){
   var base = (function(){
     var init = function(){
 
-      // console.log('module: init base');
+      console.log('module: init base');
 
     };
 

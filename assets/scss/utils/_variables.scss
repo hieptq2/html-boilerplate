@@ -62,9 +62,9 @@ $g-colors: (
 		'lighter': 	material-color('indigo', '400')
 	),
 	'secondary': (
-		'base': 		material-color('cyan', '500'),
-		'darker': 	material-color('cyan', '700'),
-		'lighter': 	material-color('cyan', '400')
+		'base': 		material-color('teal', '500'),
+		'darker': 	material-color('teal', '700'),
+		'lighter': 	material-color('teal', '400')
 	),
 	'text': (
 		'base': 		$grey900,
@@ -214,9 +214,9 @@ $g-line-height: 1.5;
  */
 
 $g-heading: (
-	'font-size': 			(2rem, 1.75rem, 1.5rem, 1.25rem, 1.125rem, 1rem),
+	'font-size': 			(1.75rem, 1.5rem, 1.25rem, 1rem, .875rem, .75rem),
 	'font-weight': 		set-font('weight', 'medium'),
-	'line-height': 		(1.25, 1.25, 1.375, 1.375, 1.5, 1.5),
+	'line-height': 		(1.25, 1.25, 1.375, 1.5, 1.5, 1.5),
 	'margin-bottom': 	(1.5rem, 1.5rem, 1.25rem, 1.25rem, 1rem, 1rem)
 );
 
