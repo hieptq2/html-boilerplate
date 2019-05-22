@@ -71,7 +71,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: $lines-to-show * $line-height;
+  max-height: $lines-to-show * $line-height;
   @if ($height){
   	height: $lines-to-show * $line-height;
   }
@@ -107,21 +107,17 @@
 @mixin scrollbar($size, 
                  $primary,
                  $secondary: lighten($primary, 40%), 
-                 $border-radius: $size / 2) {
+                 $border-radius: 0) {
   &::-webkit-scrollbar {
     width:  $size;
     height: $size;
   }
   &::-webkit-scrollbar-thumb {
     background: $primary;
-  }
-  &::-webkit-scrollbar-track {
-    background: $secondary;
-  }
-  &::-webkit-scrollbar-thumb {
     border-radius: $border-radius;
   }
   &::-webkit-scrollbar-track {
+    background: $secondary;
     border-radius: $border-radius;
   }
 }
