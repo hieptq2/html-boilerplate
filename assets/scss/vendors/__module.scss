@@ -4,42 +4,39 @@
 
 
 /**
- * Bootstrap 4
+ * Bootstrap
  * https://getbootstrap.com/
  */
+
+@import 'bootstrap-custom';
 @import 'bootstrap/bootstrap';
 
 
 /**
+ * Bourbon 5.1.0
+ * https://www.bourbon.io/
+ */
+
+@import 'bourbon/bourbon'; 
+
+
+/**
  * Material Colors
- * https://select2.org/
+ * https://material.io/design/color/
  */
 
 @import "materialcolors/sass-material-colors";
-@import 'materialcolors/sass-material-colors-classes';
+// @import 'materialcolors/sass-material-colors-classes';
 
 
 /**
- * Material Design Icons
- * https://materialdesignicons.com/
+ * Font Awesome
+ * https://fontawesome.com
  */
 
-@import 'materialdesignicons/materialdesignicons';
+@import "fontawesome/_fontawesome.scss"
 
 
-/**
- * Swiper
- * https://idangero.us/swiper/
- */
 
-@import 'swiper/swiper';
-
-
-/**
- * Select2
- * https://select2.org/
- */
-
-@import 'select2/select2';
 
 

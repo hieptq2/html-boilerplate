@@ -10,12 +10,13 @@
  * 
  */
 
+@charset 'utf-8';
 
-// Compass Framework
+// Compass
 @import 'compass/css3';
 
 // Vendors
-@import 'vendors/_module';
+// @import 'vendors/_module';
 
 // Modules
 @import 'utils/_module';
@@ -37,6 +38,9 @@
  * t- 	: Themes
  * s- 	: Scoped
  * _ 		: Hack
+ *
+ * v- 	: Variables
+ * m- 	: Mixins
  * 
  * js- 				: JS hooks
  * is-/has- 	: State hooks
